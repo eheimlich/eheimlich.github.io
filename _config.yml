@@ -103,9 +103,8 @@ analytics:
 author:
   name             : "Ethan Heimlich"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am passionate about applying advanced statistical methods to real-world business problems. I genuinely love to learn and grow as a data scientist whether it be participating in datathons or reading about new machine learning methods. I am always excited to get my hands on interesting datasets and to utilize SQL, R, and Python to extract meaningful insights.
-As a data science intern at IQVIA, the world's largest contract research organization, I learned the importance of being able to communicate advanced statistical models to an executive business audience. I also learned that data is often times not perfect and requires a lot of effort before being ready for analysis.
-In my free time, I love to travel and explore new cultures, especially using frequent flyer miles. Some of my most treasured memories have been snorkeling in the great barrier reef, exploring markets in Bangkok, and having the world's cheapest Michelin starred food in Hong Kong."
+  bio              : "I am passionate about applying advanced statistical methods to real-world business problems. I genuinely love to learn and grow as a data scientist whether it be participating in datathons or reading about new machine learning methods. I am always excited to get my hands on interesting datasets and to utilize SQL, R, and Python to extract meaningful insights."
+
   location         : "Boston, MA & Toronto, ON"
   email            :
   links:

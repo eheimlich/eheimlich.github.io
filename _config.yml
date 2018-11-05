@@ -105,7 +105,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am passionate about applying advanced statistical methods to real-world business problems. I genuinely love to learn and grow as a data scientist whether it be participating in datathons or reading about new machine learning methods. I am always excited to get my hands on interesting datasets and to utilize SQL, R, and Python to extract meaningful insights."
 
-  location         : "Boston, MA & Toronto, ON"
+  location         : "Boston, MA"
   email            : "ejheimlich@gmail.com"
   links:
     - label: "Email"

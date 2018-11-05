@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "Data Science Portfolio & Blog"
 title_separator          : "-"
-name                     : "Your Name"
-description              : "An amazing website."
+name                     : "Ethan Heimlich"
+description              : "Ethan Heimlich's Data Science Portfolio & Blog"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -101,14 +101,16 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Ethan Heimlich"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  bio              : "I am passionate about applying advanced statistical methods to real-world business problems. I genuinely love to learn and grow as a data scientist whether it be participating in datathons or reading about new machine learning methods. I am always excited to get my hands on interesting datasets and to utilize SQL, R, and Python to extract meaningful insights.
+As a data science intern at IQVIA, the world's largest contract research organization, I learned the importance of being able to communicate advanced statistical models to an executive business audience. I also learned that data is often times not perfect and requires a lot of effort before being ready for analysis.
+In my free time, I love to travel and explore new cultures, especially using frequent flyer miles. Some of my most treasured memories have been snorkeling in the great barrier reef, exploring markets in Bangkok, and having the world's cheapest Michelin starred food in Hong Kong."
+  location         : "Boston, MA & Toronto, ON"
   email            :
   links:
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
+      icon: "ejheimlich@gmail.com"
       # url: mailto:your.name@email.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -120,10 +122,10 @@ author:
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "eheimlich"
       # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+    - label: "LinkedIN"
+      icon: "LinkedIN.com/in/eheimlich"
       # url: "https://instagram.com/"
 
 # Site Footer
@@ -288,3 +290,10 @@ defaults:
       comments: # true
       share: true
       related: true
+  #_pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true

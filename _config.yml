@@ -110,7 +110,7 @@ author:
   links:
     - label: "Email"
       icon: "ejheimlich@gmail.com"
-      # url: mailto:your.name@email.com
+       url:  ejheimlich@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -118,14 +118,14 @@ author:
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
     - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
+       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
-      icon: "eheimlich"
-      # url: "https://github.com/"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/eheimlich"
     - label: "LinkedIN"
-      icon: "LinkedIN.com/in/eheimlich"
-      # url: "https://instagram.com/"
+      icon: "fab fa-fw fa-linkedin-square"
+      url: "https://LinkedIN.com/in/eheimlich"
 
 # Site Footer
 footer:

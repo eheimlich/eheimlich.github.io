@@ -3,7 +3,7 @@ layout: archive
 permalink: /resume/
 author_profile : true
 ---
-Download Resume: [link](/documents/Ethan_Heimlich_Resume.pdf)
+Download Resume: [Ethan's Resume](/documents/Ethan_Heimlich_Resume.pdf)
 ![Resume](/images/resume.jpg)
 
 

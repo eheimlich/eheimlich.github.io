@@ -106,11 +106,11 @@ author:
   bio              : "I am passionate about applying advanced statistical methods to real-world business problems. I genuinely love to learn and grow as a data scientist whether it be participating in datathons or reading about new machine learning methods. I am always excited to get my hands on interesting datasets and to utilize SQL, R, and Python to extract meaningful insights."
 
   location         : "Boston, MA & Toronto, ON"
-  email            :
+  email            : "ejheimlich@gmail.com"
   links:
     - label: "Email"
-      icon: "ejheimlich@gmail.com"
-       url:  ejheimlich@gmail.com
+      icon: "fas fa-fw fa-envelope-square"
+       #url:  "ejheimlich@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -122,10 +122,10 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/eheimlich"
+      url: "https://www.github.com/eheimlich"
     - label: "LinkedIN"
       icon: "fab fa-fw fa-linkedin-square"
-      url: "https://LinkedIN.com/in/eheimlich"
+      url: "https://www.linkedin.com/in/eheimlich"
 
 # Site Footer
 footer:

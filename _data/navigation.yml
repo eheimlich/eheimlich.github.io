@@ -4,8 +4,8 @@ main:
     url: /about/
   - title: "Projects"
     url: /projects/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
+  - title: "Resume"
+    url: resume.HTML
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

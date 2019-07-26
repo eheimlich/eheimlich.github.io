@@ -3,11 +3,13 @@ title: "About"
 permalink: /about/
 ---
 
-I'm currently a junior at the University of Toronto majoring in statistics with minors
+I'm currently a senior at the University of Toronto majoring in statistics with minors
 in mathematics and economics. I am passionate about applying advanced
-statistical methods to real-world business problems
+statistical methods to real-world business problems. I am especially interested in causal inference, experimental design, and bayesian statistics.   
 
-This past summer I was a data science intern at IQVIA in Cambridge, Massachusetts.
+Currently, I am a data science intern at Aetna in New York City. I am working on improving member health through predictive modeling and behavior change.
+
+Last summer I was a data science intern at IQVIA in Cambridge, Massachusetts.
 I analyzed multi billion record prescription drug datasets and built a classification
 model to predict which healthcare benefit a claim was run under.
 

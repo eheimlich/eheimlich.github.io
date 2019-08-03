@@ -72,7 +72,7 @@ Lets say we are trying to evaluate five different outreach and incentive options
 
 
 
-This is what we call a $2^5$ factorial design because it has five different **factors** with two **levels** each. The 2^5^ notation is convenient because it quickly tells us how many different treatment combinations we are going to need. In this case we will need 32 distinct treatment combinations in order to evaluate all five main effects, ten 2-factor effects, ten 3-factor effects, five 4-factor effects and one 5-factor effect. We can illustrate the design in a table.
+This is what we call a $ 2^5 $ factorial design because it has five different **factors** with two **levels** each. The 2^5^ notation is convenient because it quickly tells us how many different treatment combinations we are going to need. In this case we will need 32 distinct treatment combinations in order to evaluate all five main effects, ten 2-factor effects, ten 3-factor effects, five 4-factor effects and one 5-factor effect. We can illustrate the design in a table.
 
 
 

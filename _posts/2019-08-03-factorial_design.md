@@ -72,7 +72,7 @@ Lets say we are trying to evaluate five different outreach and incentive options
 
 
 
-This is what we call a $$ 2^5 $$ factorial design because it has five different **factors** with two **levels** each. The 2^5^ notation is convenient because it quickly tells us how many different treatment combinations we are going to need. In this case we will need 32 distinct treatment combinations in order to evaluate all five main effects, ten 2-factor effects, ten 3-factor effects, five 4-factor effects and one 5-factor effect. We can illustrate the design in a table.
+This is what we call a $$ 2^5 $$ factorial design because it has five different **factors** with two **levels** each. The $$ 2^5 $$ notation is convenient because it quickly tells us how many different treatment combinations we are going to need. In this case we will need 32 distinct treatment combinations in order to evaluate all five main effects, ten 2-factor effects, ten 3-factor effects, five 4-factor effects and one 5-factor effect. We can illustrate the design in a table.
 
 
 
@@ -172,9 +172,9 @@ In the previous example we had a $2^5$ design with 32 different treatment combin
 
 
 
-Lets say we only have the resources to have 16 different treatment combination in the previous example. We can use a ^2^5-1 design which will require the 16 different treatment combinations that we can do. In general, a $2^{k-p}$ design is a
+Lets say we only have the resources to have 16 different treatment combination in the previous example. We can use a ^2^5-1 design which will require the 16 different treatment combinations that we can do. In general, a $$ 2^{k-p} $$ design is a
 
-$\frac{1}{2^p}$ fraction of a $2^k$ design. Which in turn has $2^{k-p}$ treatment combinations. In our case, a $2^{5-1}$ design is $\frac{1}{2}$ fraction of our $2^5$ full factorial design. In order to build a fractional factorial design, we are going to have to sacrifice being able to observe one or more of our effects in order to reduce the number of experimental groups. We are going to set the Gift Card value = Phone x Direct Mail x SMS. For example, to calculate the value for Gift Card in the first experimental group we will multiply 1 x 1 x 1 to get 1. For the third experimental group we would multiply 1 x 1 x -1 to get -1.
+$$ \frac{1}{2^p} $$ fraction of a $$ 2^k $$ design. Which in turn has $$ 2^{k-p} $$ treatment combinations. In our case, a $$ 2^{5-1} $$ design is $$ \frac{1}{2} $$ fraction of our $$ 2^5 $$ full factorial design. In order to build a fractional factorial design, we are going to have to sacrifice being able to observe one or more of our effects in order to reduce the number of experimental groups. We are going to set the Gift Card value = Phone x Direct Mail x SMS. For example, to calculate the value for Gift Card in the first experimental group we will multiply 1 x 1 x 1 to get 1. For the third experimental group we would multiply 1 x 1 x -1 to get -1.
 
 
 
@@ -257,13 +257,13 @@ Lets illustrate the **fractional factorial design** in a similar table as the fu
 
 ## 15                 15  No          No  No   Yes        No
 
-## 16                 16  No          No  No    No        No
+## 16                16  No          No  No    No        No
 
 ```
 
 
 
-It is important to note that we could also have a $2^{5-2}$ design if we only had the resources for eight treatment combinations. In general, the more you reduce your factorial design to the less affects you can observe. This technique can also be used when you have more than two **levels** per factor, I.e. a $3^{5-2}$ can also be done. This would reduce the number of treatment combinations from 243 down to 27 while simultaneously reducing the number of affects you are able to observe.
+It is important to note that we could also have a $$ 2^{5-2} $$ design if we only had the resources for eight treatment combinations. In general, the more you reduce your factorial design to the less affects you can observe. This technique can also be used when you have more than two **levels** per factor, I.e. a $$ 3^{5-2} $$ can also be done. This would reduce the number of treatment combinations from 243 down to 27 while simultaneously reducing the number of affects you are able to observe.
 
 
 
@@ -271,7 +271,7 @@ It is important to note that we could also have a $2^{5-2}$ design if we only ha
 
 
 
-Once we have run our experiment, we need to calculate the treatment effects. Remember, that is the whole reason why we are running an experiment in the first place! Lets use a simple example of a $2^3$ fractional design. We will have three treatments and an outcome variable which will be behavior change percentage.
+Once we have run our experiment, we need to calculate the treatment effects. Remember, that is the whole reason why we are running an experiment in the first place! Lets use a simple example of a $$ 2^3 $$ fractional design. We will have three treatments and an outcome variable which will be behavior change percentage.
 
 
 
@@ -301,7 +301,7 @@ Once we have run our experiment, we need to calculate the treatment effects. Rem
 
 
 
-From this table, how would we calculate the **main** effects of Phone, Email and SMS on behavior change? To calculate the effect of Phone we will compare each group that got an Phone with its counterpart that didnt but had the same Email and SMS levels. Then we will average all the of the difference between the pairs to get an overall main effect.
+From this table, how would we calculate the **main** effects of Phone, Email and SMS on behavior change? To calculate the effect of Phone we will compare each group that got an Phone with its counterpart that didn't but had the same Email and SMS levels. Then we will average all the of the difference between the pairs to get an overall main effect.
 
 
 
@@ -311,15 +311,13 @@ Lets look at how to calculate the main average **treatment** effect of Phone. Ou
 
 Pair          | Difference in Outcome
 
-------------- | -------------
-
 Groups 1 & 5  | 12% - 7% = 5%
 
 Groups 2 & 6  | 4% - 8% = -4%
 
 Groups 3 & 7  | 9% - 6% = 3%
 
-Grops 4 & 8   | 5% - 1% = 4%
+Groups 4 & 8  | 5% - 1% = 4%
 
 
 
@@ -329,11 +327,11 @@ Thus, the **main** average treatment effect of Phone is mean(5% - 4% + 3% + 4%) 
 
 
 
-However, how would we calculate the interaction effect between Phone and email? First, we will look at the effect of emails when Phone is present. The average treatment effect of emails given Phone is present is: $\frac{12 + 4}{2}  \frac{9 + 5}{2} = 8  7$ = 1%. Now we will look at the effect of emails when Phone isnt present. The average treatment effect of emails given Phone isnt present is: $\frac{7 + 8}{2}  \frac{6 + 1}{2} = $ 4%.
+However, how would we calculate the interaction effect between Phone and email? First, we will look at the effect of emails when Phone is present. The average treatment effect of emails given Phone is present is: $$ \frac{12 + 4}{2}  \frac{9 + 5}{2} = 8  7 $$ = 1%. Now we will look at the effect of emails when Phone isn't present. The average treatment effect of emails given Phone isn't present is: $$ \frac{7 + 8}{2}  \frac{6 + 1}{2} = $$ 4%.
 
 
 
-The interaction effect is half the difference between the two numbers we just calculated. Therefore, the interaction effect between Phone and Email is $\frac{1 - 4}{2} $= -1.5%. Calculating the other **interaction** effects is done in a similar fashion.
+The interaction effect is half the difference between the two numbers we just calculated. Therefore, the interaction effect between Phone and Email is $$ \frac{1 - 4}{2} $$ = -1.5%. Calculating the other **interaction** effects is done in a similar fashion.
 
 
 
@@ -341,11 +339,11 @@ The interaction effect is half the difference between the two numbers we just ca
 
 
 
-As mentioned earlier, a factorial design allows us to observe both main effects and interaction effects. In a $2^3$ factorial design we have three main effects that we can observe. The question becomes, how do we determine which effect size to use for the experiment?
+As mentioned earlier, a factorial design allows us to observe both main effects and interaction effects. In a $$ 2^3 $$ factorial design we have three main effects that we can observe. The question becomes, how do we determine which effect size to use for the experiment?
 
 
 
-The first step is to determine the expected effect size of each of the main effects. For example, imagine a $2^3$ design with expected effect sizes of 0.1, 0.3, and 0.8 for the **main** effects. When calculating the sample size required for the experiment, we would calculate it based on the smallest effect size. By doing this, we will be able to have adequate power across all the effects.
+The first step is to determine the expected effect size of each of the main effects. For example, imagine a $$ 2^3 $$ design with expected effect sizes of 0.1, 0.3, and 0.8 for the **main** effects. When calculating the sample size required for the experiment, we would calculate it based on the smallest effect size. By doing this, we will be able to have adequate power across all the effects.
 
 
 
@@ -353,7 +351,7 @@ Now lets suppose we want to add a treatment to our experiment. Lets compare what
 
 
 
-However, in a factorial design if the expected effect size of an added treatment is higher than the lowest expected effect size currently in the experiment then we would not need to increase the sample size. Lets take a step back here and truly appreciate the power of a factorial design (pun intended). In general, if we have an RCT with $P$ individuals in each arm, when we add another treatment, we would have to add $P$ individuals to the experiments. In contrast, seldom would we have to add subjects to a factorial experiment when adding a treatment.
+However, in a factorial design if the expected effect size of an added treatment is higher than the lowest expected effect size currently in the experiment then we would not need to increase the sample size. Lets take a step back here and truly appreciate the power of a factorial design (pun intended). In general, if we have an RCT with $$ P $$ individuals in each arm, when we add another treatment, we would have to add $$ P $$ individuals to the experiments. In contrast, seldom would we have to add subjects to a factorial experiment when adding a treatment.
 
 
 

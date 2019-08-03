@@ -327,7 +327,7 @@ Thus, the **main** average treatment effect of Phone is mean(5% - 4% + 3% + 4%) 
 
 
 
-However, how would we calculate the interaction effect between Phone and email? First, we will look at the effect of emails when Phone is present. The average treatment effect of emails given Phone is present is: $$ \frac{12 + 4}{2}  \frac{9 + 5}{2} = 8  7 $$ = 1%. Now we will look at the effect of emails when Phone isn't present. The average treatment effect of emails given Phone isn't present is: $$ \frac{7 + 8}{2}  \frac{6 + 1}{2} = $$ 4%.
+However, how would we calculate the interaction effect between Phone and email? First, we will look at the effect of emails when Phone is present. The average treatment effect of emails given Phone is present is: $$ \frac{12 + 4}{2} - \frac{9 + 5}{2} = 8 - 7 = 1% $$. Now we will look at the effect of emails when Phone isn't present. The average treatment effect of emails given Phone isn't present is: $$ \frac{7 + 8}{2} - \frac{6 + 1}{2} = 4% $$.
 
 
 

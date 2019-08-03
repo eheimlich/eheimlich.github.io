@@ -308,18 +308,18 @@ From this table, how would we calculate the **main** effects of Phone, Email and
 Lets look at how to calculate the main average **treatment** effect of Phone. Our first step will be to figure out which experimental groups will be paired together. In this case, the pairs will be: [1, 5], [2, 6], [3, 7], [4, 8]. The only treatment that differs within each of the pairs is whether they received Phone.  Now we will calculate the differences in our outcome variable within each of the pairs and then average the results.
 
 
+```
+Pair          Difference in Outcome
 
-Pair          | Difference in Outcome
+Groups 1 & 5   12% - 7% = 5%
 
-Groups 1 & 5  | 12% - 7% = 5%
+Groups 2 & 6   4% - 8% = -4%
 
-Groups 2 & 6  | 4% - 8% = -4%
+Groups 3 & 7   9% - 6% = 3%
 
-Groups 3 & 7  | 9% - 6% = 3%
+Groups 4 & 8   5% - 1% = 4%
 
-Groups 4 & 8  | 5% - 1% = 4%
-
-
+```
 
 
 

@@ -18,7 +18,7 @@ A/B testing is the gold standard for quantifying the effect of a treatment. Some
 
 A/B testing is what we call a randomized controlled trial with one **factor** and two **levels**. That is a fancy way of saying that we are varying one aspect and have two different quantities which we are testing. For example, suppose one was interested in whether Aspirin helps to prevent heart attacks. We would give the test group a dose of Aspirin and the holdout group a placebo. In this example, the factor is Aspirin and the two levels are 325mg and 0mg.
 
- 
+
 
 
 
@@ -68,15 +68,15 @@ What we have essentially done is combined two unrelated experiments into one. Th
 
 
 
-Lets say we are trying to evaluate five different outreach and incentive options in an NBA. For example, we want to evaluate IVR, direct mail, SMS, email and gift card incentives on a specific behavior change. We dont only want to see the **main** effects that each of the outreach options has on the outcome, but also the **interaction** effects between the different outreach options. In order to do so, we are going to need to use a **factorial design**!
+Lets say we are trying to evaluate five different outreach and incentive options in an NBA. For example, we want to evaluate Phone, direct mail, SMS, email and gift card incentives on a specific behavior change. We dont only want to see the **main** effects that each of the outreach options has on the outcome, but also the **interaction** effects between the different outreach options. In order to do so, we are going to need to use a **factorial design**!
 
 
 
-This is what we call a 2^5^ factorial design because it has five different **factors** with two **levels** each. The 2^5^ notation is convenient because it quickly tells us how many different treatment combinations we are going to need. In this case we will need 32 distinct treatment combinations in order to evaluate all five main effects, ten 2-factor effects, ten 3-factor effects, five 4-factor effects and one 5-factor effect. We can illustrate the design in a table.
+This is what we call a $2^5$ factorial design because it has five different **factors** with two **levels** each. The 2^5^ notation is convenient because it quickly tells us how many different treatment combinations we are going to need. In this case we will need 32 distinct treatment combinations in order to evaluate all five main effects, ten 2-factor effects, ten 3-factor effects, five 4-factor effects and one 5-factor effect. We can illustrate the design in a table.
 
 
 
-For example, experimental group #1 will receive IVR, Direct Mail, SMS, Email and a Gift Card. While group #8 will only receive IVR and Direct Mail.
+For example, experimental group #1 will receive Phone, Direct Mail, SMS, Email and a Gift Card. While group #8 will only receive Phone and Direct Mail.
 
 
 
@@ -84,7 +84,7 @@ For example, experimental group #1 will receive IVR, Direct Mail, SMS, Email and
 
 ```
 
-##    Experimental_Group IVR Direct_Mail SMS Email Gift_Card
+##    Experimental_Group Phone Direct_Mail SMS Email Gift_Card
 
 ## 1                   1 Yes         Yes Yes   Yes       Yes
 
@@ -156,7 +156,7 @@ For example, experimental group #1 will receive IVR, Direct Mail, SMS, Email and
 
 
 
-The table was designed in such a way to maintain a fundamental principle of experimental design, **orthogonality**. A design is orthogonal if the dot product between each combination of every factor is equal to 0. For example, the dot product between the IVR vector and the Direct Mail vector is equal to 0. You can check the arithmetic on your own by summing the product of each row between the IVR and Direct Mail columns. **Orthogonality** guarantees that the effect of one factor or interaction can be estimated separately from the effect of any other factor or interaction in the model [2].
+The table was designed in such a way to maintain a fundamental principle of experimental design, **orthogonality**. A design is orthogonal if the dot product between each combination of every factor is equal to 0. For example, the dot product between the Phone vector and the Direct Mail vector is equal to 0. You can check the arithmetic on your own by summing the product of each row between the Phone and Direct Mail columns. **Orthogonality** guarantees that the effect of one factor or interaction can be estimated separately from the effect of any other factor or interaction in the model [2].
 
 
 
@@ -168,13 +168,13 @@ Once we have created the design table, we are going to need to assign the member
 
 
 
-In the previous example we had a $2^5$ design with 32 different treatment combinations. We were able to measure all the **main** effects and every possible interaction effect. However, what if we werent interested in measuring all the **interaction** effects? Or, what if we dont have the resources to conduct 32 different treatment combinations? We can solve these problems by using a modification of a factorial design called a fractional factorial design.
+In the previous example we had a $2^5$ design with 32 different treatment combinations. We were able to measure all the **main** effects and every possible interaction effect. However, what if we weren't interested in measuring all the **interaction** effects? Or, what if we don't have the resources to conduct 32 different treatment combinations? We can solve these problems by using a modification of a factorial design called a fractional factorial design.
 
 
 
 Lets say we only have the resources to have 16 different treatment combination in the previous example. We can use a ^2^5-1 design which will require the 16 different treatment combinations that we can do. In general, a $2^{k-p}$ design is a
 
-$\frac{1}{2^p}$ fraction of a $2^k$ design. Which in turn has $2^{k-p}$ treatment combinations. In our case, a $2^{5-1}$ design is $\frac{1}{2}$ fraction of our $2^5$ full factorial design. In order to build a fractional factorial design, we are going to have to sacrifice being able to observe one or more of our effects in order to reduce the number of experimental groups. We are going to set the Gift Card value = IVR x Direct Mail x SMS. For example, to calculate the value for Gift Card in the first experimental group we will multiply 1 x 1 x 1 to get 1. For the third experimental group we would multiply 1 x 1 x -1 to get -1.
+$\frac{1}{2^p}$ fraction of a $2^k$ design. Which in turn has $2^{k-p}$ treatment combinations. In our case, a $2^{5-1}$ design is $\frac{1}{2}$ fraction of our $2^5$ full factorial design. In order to build a fractional factorial design, we are going to have to sacrifice being able to observe one or more of our effects in order to reduce the number of experimental groups. We are going to set the Gift Card value = Phone x Direct Mail x SMS. For example, to calculate the value for Gift Card in the first experimental group we will multiply 1 x 1 x 1 to get 1. For the third experimental group we would multiply 1 x 1 x -1 to get -1.
 
 
 
@@ -182,11 +182,11 @@ We now say that effect of the gift card is **aliased** with the three-way intera
 
 
 
-In this design the **main** effects of IVR, Direct Mail, SMS and Gift Cards are able to be estimated if all combinations of three-way interaction effects out of IVR, Direct Mail, SMS and Gift Cards are negligible. In summary, we can now only observe the following 15 effects:
+In this design the **main** effects of Phone, Direct Mail, SMS and Gift Cards are able to be estimated if all combinations of three-way interaction effects out of Phone, Direct Mail, SMS and Gift Cards are negligible. In summary, we can now only observe the following 15 effects:
 
 
 
-1. IVR
+1. Phone
 
 2. Direct Mail
 
@@ -196,13 +196,13 @@ In this design the **main** effects of IVR, Direct Mail, SMS and Gift Cards are 
 
 5. Gift Card
 
-6. IVR x Direct Mail
+6. Phone x Direct Mail
 
-7. IVR x SMS
+7. Phone x SMS
 
 8. Direct Mail x SMS
 
-9. IVR x Email
+9. Phone x Email
 
 10. Direct Mail x Email
 
@@ -210,9 +210,9 @@ In this design the **main** effects of IVR, Direct Mail, SMS and Gift Cards are 
 
 12. Gift Card x Email
 
-13. IVR x Direct Mial x Email
+13. Phone x Direct Mail x Email
 
-14. IVR x SMS x Email
+14. Phone x SMS x Email
 
 15. Direct Mail x SMS x Email
 
@@ -225,7 +225,7 @@ Lets illustrate the **fractional factorial design** in a similar table as the fu
 
 ```
 
-##    Experimental_Group IVR Direct_Mail SMS Email Gift_Card
+##    Experimental_Group Phone Direct_Mail SMS Email Gift_Card
 
 ## 1                   1 Yes         Yes Yes   Yes       Yes
 
@@ -279,7 +279,7 @@ Once we have run our experiment, we need to calculate the treatment effects. Rem
 
 ```
 
-##   Experimental_Group IVR Email SMS Behavior_Change_Percent
+##   Experimental_Group Phone Email SMS Behavior_Change_Percent
 
 ## 1                  1 Yes   Yes Yes                      12
 
@@ -301,11 +301,11 @@ Once we have run our experiment, we need to calculate the treatment effects. Rem
 
 
 
-From this table, how would we calculate the **main** effects of IVR, Email and SMS on behavior change? To calculate the effect of IVR we will compare each group that got an IVR with its counterpart that didnt but had the same Email and SMS levels. Then we will average all the of the difference between the pairs to get an overall main effect.
+From this table, how would we calculate the **main** effects of Phone, Email and SMS on behavior change? To calculate the effect of Phone we will compare each group that got an Phone with its counterpart that didnt but had the same Email and SMS levels. Then we will average all the of the difference between the pairs to get an overall main effect.
 
 
 
-Lets look at how to calculate the main average **treatment** effect of IVR. Our first step will be to figure out which experimental groups will be paired together. In this case, the pairs will be: [1, 5], [2, 6], [3, 7], [4, 8]. The only treatment that differs within each of the pairs is whether they received IVR.  Now we will calculate the differences in our outcome variable within each of the pairs and then average the results.
+Lets look at how to calculate the main average **treatment** effect of Phone. Our first step will be to figure out which experimental groups will be paired together. In this case, the pairs will be: [1, 5], [2, 6], [3, 7], [4, 8]. The only treatment that differs within each of the pairs is whether they received Phone.  Now we will calculate the differences in our outcome variable within each of the pairs and then average the results.
 
 
 
@@ -325,15 +325,15 @@ Grops 4 & 8   | 5% - 1% = 4%
 
 
 
-Thus, the **main** average treatment effect of IVR is mean(5% - 4% + 3% + 4%) = 2%. The process to calculate any of the other **main** average treatment effects is the same.
+Thus, the **main** average treatment effect of Phone is mean(5% - 4% + 3% + 4%) = 2%. The process to calculate any of the other **main** average treatment effects is the same.
 
 
 
-However, how would we calculate the interaction effect between IVR and email? First, we will look at the effect of emails when IVR is present. The average treatment effect of emails given IVR is present is: $\frac{12 + 4}{2}  \frac{9 + 5}{2} = 8  7$ = 1%. Now we will look at the effect of emails when IVR isnt present. The average treatment effect of emails given IVR isnt present is: $\frac{7 + 8}{2}  \frac{6 + 1}{2} = $ 4%.
+However, how would we calculate the interaction effect between Phone and email? First, we will look at the effect of emails when Phone is present. The average treatment effect of emails given Phone is present is: $\frac{12 + 4}{2}  \frac{9 + 5}{2} = 8  7$ = 1%. Now we will look at the effect of emails when Phone isnt present. The average treatment effect of emails given Phone isnt present is: $\frac{7 + 8}{2}  \frac{6 + 1}{2} = $ 4%.
 
 
 
-The interaction effect is half the difference between the two numbers we just calculated. Therefore, the interaction effect between IVR and Email is $\frac{1 - 4}{2} $= -1.5%. Calculating the other **interaction** effects is done in a similar fashion.
+The interaction effect is half the difference between the two numbers we just calculated. Therefore, the interaction effect between Phone and Email is $\frac{1 - 4}{2} $= -1.5%. Calculating the other **interaction** effects is done in a similar fashion.
 
 
 

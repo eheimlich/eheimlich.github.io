@@ -4,6 +4,8 @@ date: 2019-08-03
 tags: [Experimental Design, A/B Testing]
 excerpt: "Factorial Design 101"
 mathjax: True
+header:
+  image: "/images/lab_experiment.jpg"
 ---
 
 ## Motivation & Simple Example:

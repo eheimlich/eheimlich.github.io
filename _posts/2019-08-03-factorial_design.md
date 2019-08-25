@@ -3,6 +3,8 @@ title: "Factorial Design 101"
 date: 2019-08-03
 tags: [Experimental Design, A/B Testing]
 excerpt: "Factorial Design 101"
+header:
+  image: "/images/toronto.jpg"
 mathjax: True
 ---
 

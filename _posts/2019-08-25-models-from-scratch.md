@@ -8,4 +8,5 @@ header:
   image: "/images/conference.jpg"
 ---
 
-## Test
+Today I am excited to announce my first ever series on my blog called Models from
+Scratch!

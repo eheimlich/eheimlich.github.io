@@ -9,4 +9,8 @@ header:
 ---
 
 Today I am excited to announce my first ever series on my blog called Models from
-Scratch!
+Scratch. This will be a multi-part serious where I go through several popular
+machine learning algorithms and code them from scratch in Python. 
+
+
+## Motivation

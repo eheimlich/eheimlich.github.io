@@ -25,14 +25,12 @@ into code. The code won't be optimized for large datasets, because the goal of t
 ## Overview
 
 Each blog post will cover a different machine learning model and walk through
-the math and the corrosponding python code. I am hoping that this series will be
-useful to both aspiring and current data scientists.
+the math and the corresponding python code.
 
 ## Potential posts
 
 I am hoping to cover a wide spectrum of both supervised and unsupervised learning
-models. These are the models I am hoping to get to eventually, but I may or may not
-be able to get to everything.
+models in the series. This will be a multi month long series
 
 ### Supervised learning
 1. Linear Regression
@@ -40,9 +38,15 @@ be able to get to everything.
 2. Logistic Regression
 3. K-Nearest Neighbors
 4. Tree Based Methods: Desicsion Trees, Random Forests, and Gradient Boosted Machines
-5. Nueral Networks
 
 ### Unsupervised Learning
 1. k-Means Clustering
-2. Heirichal Clustering
-3. 
+2. Hierarchical Clustering
+3. PCA
+
+## Feedback
+
+As a young data scientist it is important to continously be learning. Please
+comment down below any advice or suggestions that you have. I may make mistakes along the way
+and I appreciate all constructive feedback. If you don't feel comforatorable commenting on the blog,
+feel free to email or connect with me on LinkedIn.

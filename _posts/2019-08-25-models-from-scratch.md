@@ -44,11 +44,11 @@ models in the series. I may add or remove some models form the list depending on
 Many machine learning models are extensions of other machine learning models. For example, LASSO regression
 is merely an extension of linear regression with an added penalty term. When designing the code for each model we
 want to be cognisant of how the code could be used later on. In the case of the LASSO we would want to inherit most of the code
-from linear regression and only override what is necessary to change. As a result, my goal is to heavily utilize object oriented software design principles when writing the math in code. 
+from linear regression and only override what is necessary to change. As a result, my goal is to heavily utilize object oriented software design principles when writing the code.
 
 ## Feedback
 
-As a young data scientist it is important to continously be learning. Please
+As a young data scientist it is important to continuously be learning. Please
 comment down below any advice or suggestions that you have. I may make mistakes along the way
-and I appreciate all constructive feedback. If you don't feel comforatorable commenting on the blog,
+and I appreciate all constructive feedback. If you don't feel comfortable commenting on the blog,
 feel free to email or connect with me on LinkedIn.

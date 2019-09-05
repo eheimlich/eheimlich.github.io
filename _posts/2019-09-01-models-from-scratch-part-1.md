@@ -5,7 +5,7 @@ tags: [Machine Learning, Python, Mathematics, Statistics]
 excerpt: "Linear Regression"
 mathjax: True
 header:
-  image: "/images/conference.jpg"
+  image: "/images/Rplot02.png"
 ---
 ## Introduction
 
@@ -36,4 +36,8 @@ shines and what functionality we want to code up.
 ## Linear Regression
 
 In this post I am going to be using matrix notation for defining and solving the linear regression. Linear regression is a model
-that at its' core fits a straight line through a set of points in $$R ^ N  $$.
+that at its' core models the relationship between a continuous outcome and one or more variables.
+
+We can formalize this intuition with mathematical notation:
+
+$$ y = x \beta + \epsilon $$

@@ -68,7 +68,7 @@ What we have essentially done is combined two unrelated experiments into one. Th
 
 
 
-Lets say we are trying to evaluate five different outreach and incentive options in an NBA. For example, we want to evaluate Phone, direct mail, SMS, email and gift card incentives on a specific behavior change. We dont only want to see the **main** effects that each of the outreach options has on the outcome, but also the **interaction** effects between the different outreach options. In order to do so, we are going to need to use a **factorial design**!
+Lets say we are trying to evaluate five different outreach and incentive options in a consumer facing marketing campaign. For example, we want to evaluate Phone, direct mail, SMS, email and gift card incentives on a specific behavior change. We don't only want to see the **main** effects that each of the outreach options has on the outcome, but also the **interaction** effects between the different outreach options. In order to do so, we are going to need to use a **factorial design**!
 
 
 
@@ -168,11 +168,11 @@ Once we have created the design table, we are going to need to assign the member
 
 
 
-In the previous example we had a $2^5$ design with 32 different treatment combinations. We were able to measure all the **main** effects and every possible interaction effect. However, what if we weren't interested in measuring all the **interaction** effects? Or, what if we don't have the resources to conduct 32 different treatment combinations? We can solve these problems by using a modification of a factorial design called a fractional factorial design.
+In the previous example we had a $$ 2^5 $$ design with 32 different treatment combinations. We were able to measure all the **main** effects and every possible interaction effect. However, what if we weren't interested in measuring all the **interaction** effects? Or, what if we don't have the resources to conduct 32 different treatment combinations? We can solve these problems by using a modification of a factorial design called a fractional factorial design.
 
 
 
-Lets say we only have the resources to have 16 different treatment combination in the previous example. We can use a ^2^5-1 design which will require the 16 different treatment combinations that we can do. In general, a $$ 2^{k-p} $$ design is a
+Lets say we only have the resources to have 16 different treatment combination in the previous example. We can use a $$ ^2^5-1 $$ design which will require the 16 different treatment combinations that we can do. In general, a $$ 2^{k-p} $$ design is a
 
 $$ \frac{1}{2^p} $$ fraction of a $$ 2^k $$ design. Which in turn has $$ 2^{k-p} $$ treatment combinations. In our case, a $$ 2^{5-1} $$ design is $$ \frac{1}{2} $$ fraction of our $$ 2^5 $$ full factorial design. In order to build a fractional factorial design, we are going to have to sacrifice being able to observe one or more of our effects in order to reduce the number of experimental groups. We are going to set the Gift Card value = Phone x Direct Mail x SMS. For example, to calculate the value for Gift Card in the first experimental group we will multiply 1 x 1 x 1 to get 1. For the third experimental group we would multiply 1 x 1 x -1 to get -1.
 

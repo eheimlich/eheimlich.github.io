@@ -172,7 +172,7 @@ In the previous example we had a $$ 2^5 $$ design with 32 different treatment co
 
 
 
-Lets say we only have the resources to have 16 different treatment combination in the previous example. We can use a $$ ^2^5-1 $$ design which will require the 16 different treatment combinations that we can do. In general, a $$ 2^{k-p} $$ design is a
+Lets say we only have the resources to have 16 different treatment combination in the previous example. We can use a $$ 2^5-1 $$ design which will require the 16 different treatment combinations that we can do. In general, a $$ 2^{k-p} $$ design is a
 
 $$ \frac{1}{2^p} $$ fraction of a $$ 2^k $$ design. Which in turn has $$ 2^{k-p} $$ treatment combinations. In our case, a $$ 2^{5-1} $$ design is $$ \frac{1}{2} $$ fraction of our $$ 2^5 $$ full factorial design. In order to build a fractional factorial design, we are going to have to sacrifice being able to observe one or more of our effects in order to reduce the number of experimental groups. We are going to set the Gift Card value = Phone x Direct Mail x SMS. For example, to calculate the value for Gift Card in the first experimental group we will multiply 1 x 1 x 1 to get 1. For the third experimental group we would multiply 1 x 1 x -1 to get -1.
 

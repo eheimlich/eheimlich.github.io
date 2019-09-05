@@ -35,9 +35,15 @@ shines and what functionality we want to code up.
 
 ## Linear Regression
 
-In this post I am going to be using matrix notation for defining and solving the linear regression. Linear regression is a model
-that at its' core models the relationship between a continuous outcome and one or more variables.
+### 1. Overview
+Linear regression is a model that at its' core models the relationship between a continuous outcome and one or more independent variables.
 
-We can formalize this intuition with mathematical notation:
+We can formalize this intuition with mathematical notation in the case of a single independent variable:
 
-$$ y = x \beta + \epsilon $$
+$$ y = \beta_0 + \beta_1 x + \epsilon $$
+
+In the rest of this post we will be using matrix notation and we want to generalize to data with n rows and p independent features. So let's rewrite the previous equation with matrix notation:
+
+$$ y = X \beta + \epsilon $$
+
+Where y is a $$ n \times 1 $$ matrix containing the outcome values. $$ X $$ is a $$n \times p $$ matrix containing the feature data. Finally, $$\epsilon$$ is a $$n \times 1 $$ matrix of the error terms.

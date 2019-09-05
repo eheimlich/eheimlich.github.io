@@ -46,4 +46,10 @@ In the rest of this post we will be using matrix notation and we want to general
 
 $$ y = X \beta + \epsilon $$
 
-Where y is a $$ n \times 1 $$ matrix containing the outcome values. $$ X $$ is a $$n \times p + 1 $$ matrix containing the feature data. $$\beta$$ is a $$p + 1 \times 1$$ matrix of the coefficients of the model. Finally, $$\epsilon$$ is a $$n \times 1 $$ matrix of the error terms.
+Where y is a $$ n \times 1 $$ matrix containing the outcome values.
+
+$$ X $$ is a $$n \times (p + 1) $$ matrix containing the feature data.
+
+$$\beta$$ is a $$(p + 1) \times 1$$ matrix of the coefficients of the model.
+
+Finally, $$\epsilon$$ is a $$n \times 1 $$ matrix of the error terms.

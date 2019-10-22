@@ -32,4 +32,5 @@ Now let's rewrite the previous model using matrix notation to make our lives eas
 $$ y_i = X_i^{T} \beta + \epsilon_i $$
 
 Where y is a $$ n \times 1 $$ matrix containing the outcome values. $$ X_i $$ is the covariates
-for the ith observation. $$\beta$$ is a vector of the coefficients of the model. Finally, $$\epsilon_i$$ is the residual term for each observation. 
+for the ith observation. $$\beta$$ is a vector of the coefficients of the model. Finally, $$\epsilon_i$$ is the residual term for each observation. It is important
+to note that we haven't changed anything mathematically.

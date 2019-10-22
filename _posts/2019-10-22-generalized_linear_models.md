@@ -18,4 +18,5 @@ economics, statistics, mathematics, and computer science are probably exposed to
 
 ### a) Theory
 If you have seen the formalization of linear regression before, you may have seen this notation:
-$$ y = \beta_0 + \beta_1 x + \epsilon $$
+
+$$ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + ...+ \beta_k x_k + \epsilon $$

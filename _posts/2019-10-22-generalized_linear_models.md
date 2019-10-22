@@ -24,16 +24,12 @@ If you have seen the formalization of multiple linear regression before, you may
 $$ y_i = \beta_0 + \beta_1 x_i1 + \beta_2 x_i2 + ...+ \beta_k x_ik + \epsilon_i $$
 
 Where $$y_i$$ is the response for the ith observation, and there are $$k$$ predictor variables. In order to infer
-meaning from the coefficients, we assume that the residual terms for each observation, $$\epsilon_i$$, are normally
+meaning from the coefficients, we assume that the residual term for each observation, $$\epsilon_i$$, are normally
 distributed.
 
 Now let's rewrite the previous model using matrix notation to make our lives easier:
 
-$$ y_i = X_i^{T} \beta + \epsilon $$
+$$ y_i = X_i^{T} \beta + \epsilon_i $$
 
-Where y is a $$ n \times 1 $$ matrix containing the outcome values. $$ X_i $$ is a matrix containing the
-feature data.
-
-$$\beta$$ is a $$(p + 1) \times 1$$ matrix of the coefficients of the model.
-
-Finally, $$\epsilon$$ is a $$n \times 1 $$ matrix of the error terms.
+Where y is a $$ n \times 1 $$ matrix containing the outcome values. $$ X_i $$ is the covariates
+for the ith observation. $$\beta$$ is a vector of the coefficients of the model. Finally, $$\epsilon_i$$ is the residual term for each observation. 

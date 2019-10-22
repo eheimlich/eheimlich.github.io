@@ -29,7 +29,7 @@ distributed.
 
 Now let's rewrite the previous model using matrix notation to make our lives easier:
 
-$$ y = X \beta + \epsilon $$
+$$ y_i = X_i^{T} \beta + \epsilon $$
 
 Where y is a $$ n \times 1 $$ matrix containing the outcome values. $$ X_i $$ is a matrix containing the
 feature data.

@@ -7,7 +7,15 @@ mathjax: True
 ---
 
 # Introduction
-I recently came across generalized linear models in one of my statistics classes at the University of Toronto. After speaking with many data scientists,
-I think that GLM's are often an underutilized tool in industry. In today's post I am going to be walking through the basics of GLM's by first introducing linear regression. While many data scientists have seen linear regression before, we will slightly modify the notation to fit the GLM framework.
+I recently came across generalized linear models in one of my statistics classes at the University of Toronto. I was blown away by the power and simplicity of GLM's and how applicable they can be in industry.  
+
+Generalized linear models are simply a generalization of linear regression to fit other types of data. In today's post I am going to be walking through the basics of GLM's by first introducing linear regression.
 
 # Linear Regression
+Linear regression is such a common and versatile tool that many students learn linear regression even
+if it's the only statistical model they ever learn. Students in social sciences, physical sciences,
+economics, statistics, mathematics, and computer science are probably exposed to linear regression at some point in their coursework.
+
+\begin{equation*}
+  y = \beta_0 + \beta_1 
+\end{equation*}

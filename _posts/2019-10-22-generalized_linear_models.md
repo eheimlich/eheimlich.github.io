@@ -22,6 +22,6 @@ If you have seen the formalization of multiple linear regression before, you may
 
 $$ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + ...+ \beta_k x_k + \epsilon $$
 
-Where $y$ is the response, and there are $k$ predictor variables. In order to infer
-meaning from the coefficients, we assume that the residual terms of the model, $\epsilon$, are normally
+Where $$y$$ is the response, and there are $$k$$ predictor variables. In order to infer
+meaning from the coefficients, we assume that the residual terms of the model, $$\epsilon$$, are normally
 distributed.

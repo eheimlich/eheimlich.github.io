@@ -29,8 +29,13 @@ distributed.
 
 Now let's rewrite the previous model using matrix notation to make our lives easier:
 
-$$ y_i = X_i^{T} \beta + \epsilon_i $$
+$$ Y_i = X_i^{T} \beta + \epsilon_i $$
 
-Where $$y_i$$ is the response for the ith observation. $$ X_i $$ is the covariates
-for the ith observation. $$\beta$$ is a vector of the coefficients of the model. Finally, $$\epsilon_i$$ is the residual term for each observation. It is important
-to note that we haven't changed anything mathematically.
+Where $$Y_i$$ is the response for the ith observation. $$ X_i $$ is the vector of covariates
+for the ith observation. $$\beta$$ is a vector of the coefficients of the model. Finally, $$\epsilon_i$$ is the residual term for each observation.
+
+It is important to note that we haven't changed anything mathematically. Now let's rewrite multiple linear regression one more time:
+
+$$Y_i \sim N(\mu_i, \sigma^2)$$
+
+$$\mu_i = X_i^T \beta $$

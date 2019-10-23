@@ -24,8 +24,8 @@ If you have seen the formalization of multiple linear regression before, you may
 $$ y_i = \beta_0 + \beta_1 x_i1 + \beta_2 x_i2 + ...+ \beta_k x_ik + \epsilon_i $$
 
 Where $$y_i$$ is the response for the ith observation, and there are $$k$$ predictor variables. In order to infer
-meaning from the coefficients, we assume that the residual term for each observation, $$\epsilon_i$$, are normally
-distributed.
+meaning from the coefficients, we assume that the residual term for each observation, $$\epsilon_i$$, follows a normal
+distribution.
 
 Now let's rewrite the previous model using matrix notation to make our lives easier:
 
@@ -39,3 +39,7 @@ It is important to note that we haven't changed anything mathematically. Now let
 $$Y_i \sim N(\mu_i, \sigma^2)$$
 
 $$\mu_i = X_i^T \beta $$
+
+What we are saying here is that the outcome for each observation is normally distributed with a mean of $$\mu_i$$ and variance of $$\sigma^2$$. In order to find $$\mu_i$$ for each observation we just find the output of the covariates and coefficients, $$ X_i^T \beta$$.
+
+In this third formulation of multiple linear regression, we still haven't changed anything mathematically. We are only doing this to make it easier to **generalize** multiple linear regression later.   

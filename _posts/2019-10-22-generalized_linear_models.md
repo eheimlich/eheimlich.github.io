@@ -9,7 +9,7 @@ mathjax: True
 ## 1. Introduction
 I recently came across generalized linear models in one of my statistics classes at the University of Toronto. I was blown away by the power and simplicity of GLM's and how applicable they can be in industry.  
 
-Generalized linear models are simply a generalization of linear regression to fit other types of data. In this post I am going to be walking through the basics of GLM's by first quickly recapping linear regression.
+Generalized linear models are simply a **generalization** of linear regression to fit other types of data. In this post I am going to be walking through the basics of GLM's by first quickly recapping linear regression.
 
 I am going to be assuming that you have an understanding of multiple linear regression and very basic linear algebra. If not, I highly recommend brushing up before reading the rest of this post.
 
@@ -32,9 +32,9 @@ Now let's rewrite the previous model using matrix notation to make our lives eas
 $$ Y_i = X_i^{T} \beta + \epsilon_i $$
 
 Where $$Y_i$$ is the response for the ith observation. $$ X_i $$ is the vector of covariates
-for the ith observation. $$\beta$$ is a vector of the coefficients of the model. Finally, $$\epsilon_i$$ is the residual term for each observation.
+for the ith observation. $$\beta$$ is a vector of the coefficients of the model. Finally, $$\epsilon_i$$ is the residual term for each observation. It is important to note that we haven't changed anything mathematically.
 
-It is important to note that we haven't changed anything mathematically. Now let's rewrite multiple linear regression one more time:
+Now let's rewrite multiple linear regression one more time:
 
 $$Y_i \sim N(\mu_i, \sigma^2)$$
 

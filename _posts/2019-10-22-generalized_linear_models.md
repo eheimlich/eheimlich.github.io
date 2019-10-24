@@ -43,3 +43,30 @@ $$\mu_i = X_i^T \beta $$
 What we are saying here is that the outcome for each observation is normally distributed with a mean of $$\mu_i$$ and variance of $$\sigma^2$$. In order to find $$\mu_i$$ for each observation we just find the output of the covariates and coefficients, $$ X_i^T \beta$$.
 
 In this third formulation of multiple linear regression, we still haven't changed anything mathematically. We are only doing this to make it easier to **generalize** multiple linear regression later.   
+
+## 3. Generalized linear models
+
+We are going to use 
+
+```python
+model = glm(formula = 'Survived ~ Fare', data = my_data, family = sm.families.Binomial())
+model_results = model.fit()
+print(model_results.summary())
+```
+
+                     Generalized Linear Model Regression Results                  
+    ==============================================================================
+    Dep. Variable:               Survived   No. Observations:                  891
+    Model:                            GLM   Df Residuals:                      889
+    Model Family:                Binomial   Df Model:                            1
+    Link Function:                  logit   Scale:                          1.0000
+    Method:                          IRLS   Log-Likelihood:                -558.78
+    Date:                Thu, 24 Oct 2019   Deviance:                       1117.6
+    Time:                        15:43:46   Pearson chi2:                     934.
+    No. Iterations:                     5   Covariance Type:             nonrobust
+    ==============================================================================
+                     coef    std err          z      P>|z|      [0.025      0.975]
+    ------------------------------------------------------------------------------
+    Intercept     -0.9413      0.095     -9.895      0.000      -1.128      -0.755
+    Fare           0.0152      0.002      6.809      0.000       0.011       0.020
+    ==============================================================================

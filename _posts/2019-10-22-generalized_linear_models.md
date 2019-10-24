@@ -46,7 +46,9 @@ In this third formulation of multiple linear regression, we still haven't change
 
 ## 3. Generalized linear models
 
-We are going to use 
+When we were working with linear regression, we were working with normally distributed outcome data. Now, imagine our outcome was a yes or no, a discrete count, or a continuous variable that isn't normally distributed. Our assumptions for linear regression completely fall apart, and we need a new tool.
+
+This is where our friend generalized linear models comes into play. It is still a linear model but now our outcome can come from any distribution from the exponential family. 
 
 ```python
 model = glm(formula = 'Survived ~ Fare', data = my_data, family = sm.families.Binomial())

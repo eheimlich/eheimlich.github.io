@@ -21,7 +21,7 @@ economics, statistics, mathematics, and computer science are probably exposed to
 
 If you have seen the formalization of multiple linear regression before, you may have encountered notation similar to the following:
 
-$$ y_i = \beta_0 + \beta_1 x_i1 + \beta_2 x_i2 + ...+ \beta_k x_ik + \epsilon_i $$
+$$ y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + ...+ \beta_k x_{ik} + \epsilon_i $$
 
 Where $$y_i$$ is the response for the ith observation, and there are $$k$$ predictor variables. In order to infer
 meaning from the coefficients, we assume that the residual term for each observation, $$\epsilon_i$$, follows a normal

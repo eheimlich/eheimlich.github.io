@@ -7,7 +7,7 @@ mathjax: True
 ---
 
 ## 1. Introduction
-I recently came across generalized linear models in one of my statistics classes at the University of Toronto. I was blown away by the power and simplicity of GLM's and how applicable they can be in industry.  
+I recently came across generalized linear models in one of my statistics classes at the University of Toronto. I was blown away by the power and simplicity of GLM's and how applicable they can be in industry. In this post I am going to be walking through what they are, how to use them, and some examples of GLM's used on real world data.  
 
 Generalized linear models are simply a **generalization** of linear regression to fit other types of data. In this post I am going to be walking through the basics of GLM's by first quickly recapping linear regression.
 
@@ -59,6 +59,7 @@ The exponential family of distributions include some of the most common distribu
 * Gamma
 * and more!
 
+Let's say that our
 ```python
 model = glm(formula = 'Survived ~ Fare', data = my_data, family = sm.families.Binomial())
 model_results = model.fit()

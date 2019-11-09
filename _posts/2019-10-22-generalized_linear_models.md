@@ -48,11 +48,13 @@ In this third formulation of multiple linear regression, we still haven't change
 
 When we were working with linear regression, we were working with normally distributed outcome data. Now, imagine our outcome was a yes or no, a discrete count, or a continuous variable that isn't normally distributed. Our assumptions for linear regression completely fall apart, and we need a new tool.
 
-This is where our friend generalized linear models comes into play. It is still a linear model but now our outcome can come from any distribution from the exponential family. The exponential family of distributions is just a collection of distributions that have similar density functions. The exponential family of distributions include some of the most common distributions:
+This is where our friend generalized linear models comes to help us. It is still a linear model but now our outcome can come from any distribution from the exponential family. The exponential family of distributions is just a collection of distributions that have similar density functions. We won't worry too much in this post about density functions, so if they sound a bit scary don't worry.
+
+The exponential family of distributions include some of the most common distributions:
 * Normal
 * Bernoulli
 * Poisson
-* Exponenetial
+* Exponential
 * Chi-squared
 * Gamma
 * and more!

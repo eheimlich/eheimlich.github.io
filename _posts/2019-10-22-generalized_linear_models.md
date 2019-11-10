@@ -59,7 +59,11 @@ The exponential family of distributions include some of the most common distribu
 * Gamma
 * and more!
 
-Let's say that our
+Let's jump into a quick example where we will introduce some new terminology. Imagine we are interested in
+modeling a binary outcome, we could use a linear regression. However, a linear regression assumes our outcome is normally
+distributed which in the case of a binary outcome is certainly not true. So what can we do?
+
+Let's
 ```python
 model = glm(formula = 'Survived ~ Fare', data = my_data, family = sm.families.Binomial())
 model_results = model.fit()

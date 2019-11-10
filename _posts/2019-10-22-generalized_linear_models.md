@@ -76,7 +76,10 @@ This leads us to the next topic of this post, **link functions**. In order to ma
 
 $$Y_i \sim Bernoulli(\mu_i)$$
 
-$$log(\frac{\mu_i}{1- \mu_i})i = X_i^T \beta $$
+$$log(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
+
+We added what's called the logit link function to turn the output of $$X_i^T \beta$$ into a value between 0 and 1. In fact, you may have
+come across this model before, this is what we call **logistic regression**. Let's take a step back for a second, logistic regression is just a generalized linear model with the logit link function and binary outcome. 
 
 
 So what can we do? Let's check back to the distributions we can use with GLM, the exponential family. The Bernoulli distribution seems

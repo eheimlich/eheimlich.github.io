@@ -60,10 +60,29 @@ The exponential family of distributions include some of the most common distribu
 * and more!
 
 Let's jump into a quick example where we will introduce some new terminology. Imagine we are interested in
-modeling a binary outcome, we could use a linear regression. However, a linear regression assumes our outcome is normally
-distributed which in the case of a binary outcome is certainly not true. So what can we do?
+modeling a binary outcome. For example, whether or not someone completed rehab treatment. We could try to use a linear regression. However, a linear regression assumes our outcome is normally distributed which means that the outcome could be any continuous value between $$\infty$$ and $$-\infty$$. We can see how this would pose a problem with a binary outcome.  
 
-Let's
+The Bernoulli distribution has only 1 parameter which is the probability of being assigned a 1. Let's make that a little bit more concrete. In the example of modeling drug rehab completion, we could say that the chances of completion for a specific individual follow a $$Bernoulli(.7)$$. Which means that the person's chances of completing their drug rehab is 70%.
+
+Could this below be a good way to model drug rehab completion?
+
+$$Y_i \sim Bernoulli(\mu_i)$$
+
+$$\mu_i = X_i^T \beta $$
+
+Well there is a slight problem with this notation. We can see here that $$\mu_i$$ can be any positive or negative number as it just depends on $$X_i^T \beta$$. However, the parameter for the Bernoulli distribution must be between 0 and 1 since it is a probability.
+
+This leads us to the next topic of this post, **link functions**. In order to make sure that the input to the Bernoulli distribution is between 0 and 1, we will add what's called a link function to transform the output from the covariates into something that our distribution can handle.
+
+$$Y_i \sim Bernoulli(\mu_i)$$
+
+$$log(\frac{\mu_i}{1- \mu_i})i = X_i^T \beta $$
+
+
+So what can we do? Let's check back to the distributions we can use with GLM, the exponential family. The Bernoulli distribution seems
+like a perfect candidate because it takes a value of 1 or 0 with a certain probability. Let's try to write out our GLM mathematically using the notation we used at the end of section 2.
+
+
 ```python
 model = glm(formula = 'Survived ~ Fare', data = my_data, family = sm.families.Binomial())
 model_results = model.fit()

@@ -6,14 +6,14 @@ excerpt: "Linear Regression"
 mathjax: True
 ---
 
-## 1. Introduction
+## Introduction
 I recently came across generalized linear models in one of my statistics classes at the University of Toronto. I was blown away by the power and simplicity of GLM's and how applicable they can be in industry. In this post I am going to be walking through what they are, how to use them, and some examples of GLM's used on real world data.  
 
 Generalized linear models are simply a **generalization** of linear regression to fit other types of data. In this post I am going to be walking through the basics of GLM's by first quickly recapping linear regression.
 
 I am going to be assuming that you have an understanding of multiple linear regression and very basic linear algebra. If not, I highly recommend brushing up before reading the rest of this post.
 
-## 2. Linear Regression
+## Linear regression
 
 Linear regression is such a common and versatile tool that many students learn linear regression even
 if it's the only statistical model they ever learn. Students in social sciences, physical sciences,
@@ -44,7 +44,7 @@ What we are saying here is that the outcome for each observation is normally dis
 
 In this third formulation of multiple linear regression, we still haven't changed anything mathematically. We are only doing this to make it easier to **generalize** multiple linear regression later.   
 
-## 3. Generalized linear models
+## Generalized linear models
 
 When we were working with linear regression, we were working with normally distributed outcome data. Now, imagine our outcome was a yes or no, a discrete count, or a continuous variable that isn't normally distributed. Our assumptions for linear regression completely fall apart, and we need a new tool.
 
@@ -70,17 +70,18 @@ $$Y_i \sim Bernoulli(\mu_i)$$
 
 $$\mu_i = X_i^T \beta $$
 
-Well there is a slight problem with this notation. We can see here that $$\mu_i$$ can be any positive or negative number as it just depends on $$X_i^T \beta$$. However, the parameter for the Bernoulli distribution must be between 0 and 1 since it is a probability.This leads us to the next topic of this post, **link functions**.
+Well there is a slight problem with this notation. We can see here that $$\mu_i$$ can be any positive or negative number as it just depends on $$X_i^T \beta$$. However, the parameter for the Bernoulli distribution must be between 0 and 1 since it is a probability. This leads us to the next topic of this post, link functions.
 
-### Link functions
+## Link functions
 In order to make sure that the input to the Bernoulli distribution is between 0 and 1, let's add what's called a link function to transform the output from the covariates into something that our distribution can handle.
 
 $$Y_i \sim Bernoulli(\mu_i)$$
 
 $$log(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
 
-We added what's called the logit link function to turn the output of $$X_i^T \beta$$ into a value between 0 and 1. In fact, you may have
-come across this model before, this is what we call **logistic regression**. Let's take a step back for a second, logistic regression is just a generalized linear model with the logit link function and binary outcome.
+We added what's called the logit link function to turn the output of $$X_i^T \beta$$ into a value between 0 and 1. You can verify yourself that this guarantees that $$\mu_i$$ will be between 0 and 1.
+
+In fact, you may have come across this model before, this is what **logistic regression** is. Let's take a step back for a second, logistic regression is just a generalized linear model with the logit link function.
 
 In fact, every single GLM has a link function. Wait a second, didn't we say that linear regression is a GLM, shouldn't it have a link function? Let's go back to the notation for linear regression.
 
@@ -88,7 +89,9 @@ $$Y_i \sim N(\mu_i, \sigma^2)$$
 
 $$\mu_i = X_i^T \beta $$
 
-There is a link function in there, it's called the identity link function because it doesn't change 
+There is a link function in there, it's called the identity link function because it doesn't change $$\mu_i$$. Remember, we don't need to change $$\mu_i$$ because the supported domain for the mean are all real numbers.
+
+Every single
 
 So what can we do? Let's check back to the distributions we can use with GLM, the exponential family. The Bernoulli distribution seems
 like a perfect candidate because it takes a value of 1 or 0 with a certain probability. Let's try to write out our GLM mathematically using the notation we used at the end of section 2.

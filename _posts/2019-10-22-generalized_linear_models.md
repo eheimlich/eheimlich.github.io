@@ -81,17 +81,36 @@ $$log(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
 
 We added what's called the logit link function to turn the output of $$X_i^T \beta$$ into a value between 0 and 1. You can verify yourself that this guarantees that $$\mu_i$$ will be between 0 and 1.
 
-In fact, you may have come across this model before, this is what **logistic regression** is. Let's take a step back for a second, logistic regression is just a generalized linear model with the logit link function.
+In fact, you may have come across this model before, this is simply **logistic regression**. Let's take a step back for a second, logistic regression is just a generalized linear model with the logit link function.
 
-In fact, every single GLM has a link function. Wait a second, didn't we say that linear regression is a GLM, shouldn't it have a link function? Let's go back to the notation for linear regression.
+In fact, every single GLM has a link function. Wait a second, didn't we say that linear regression is a GLM? Shouldn't it have a link function? Let's go back to the notation for linear regression.
 
 $$Y_i \sim N(\mu_i, \sigma^2)$$
 
 $$\mu_i = X_i^T \beta $$
 
-There is a link function in there, it's called the identity link function because it doesn't change $$\mu_i$$. Remember, we don't need to change $$\mu_i$$ because the supported domain for the mean are all real numbers.
+There is a link function in there, it's just slightly hidden. It's called the identity link function because it doesn't change $$\mu_i$$ at all. Remember, we don't need to change $$\mu_i$$ because the supported domain of the normal distribution is all real numbers.
 
-Every single
+Every single GLM has a link function associated with it, and usually there is a standard link function for each distribution. For example,
+if we were doing a Poisson GLM we would use the log link which is just the natural logarithm. We use the log link because it guarantees us that $$\mu_i$$ is positive, which is needed for a Poisson distribution.
+
+We can see this simply when we solve for $$\mu_i$$:
+
+$$ln(\mu_i) = X_i^T \beta$$
+
+That implies that:
+
+$$\mu_i = e^{X_i^T \beta}$$
+
+Which means that $$\mu_i$$ must be positive.
+
+
+
+
+## Finally an example
+
+If your head is spinning with all this math, don't worry we are about to apply our knowledge on a real world data set.
+
 
 So what can we do? Let's check back to the distributions we can use with GLM, the exponential family. The Bernoulli distribution seems
 like a perfect candidate because it takes a value of 1 or 0 with a certain probability. Let's try to write out our GLM mathematically using the notation we used at the end of section 2.

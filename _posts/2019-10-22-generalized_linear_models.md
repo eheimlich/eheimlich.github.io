@@ -109,7 +109,11 @@ Which means that $$\mu_i$$ must be positive.
 
 ## Finally an example
 
-If your head is spinning with all this math, don't worry we are about to apply our knowledge on a real world data set. We will be looking at the Titanic dataset from Kaggle [(Titanic Datset)](https://www.kaggle.com/c/titanic)
+If your head is spinning with all this math, don't worry we are about to apply our knowledge on a real world data set.
+
+We will be looking at the Titanic dataset from Kaggle [(Titanic Datset)](https://www.kaggle.com/c/titanic). In this dataset we are looking at how certain characteristics affect the chance of survival for passengers on the Titanic.
+
+The first row of the dataset is shown below. We can see a binary indicator for whether they survived or not, their class of travel, name, sex, age, fare, and more.
 
 ```python
 my_data.head(1)
@@ -170,7 +174,17 @@ my_data.head(1)
 </table>
 </div>
 
+Let's start by doing a very simple Bernoulli GLM, aka a logistic regression. We are using
+a Bernoulli GLM because passenger survival is either they survived or didn't, a binary outcome. We will
+model whether a passenger survived or not just based on the fare they paid. 
 
+I know I said we were done with the math, but let's recall our mathematical model for a logistic regression:
+
+$$Y_i \sim Bernoulli(\mu_i)$$
+
+$$log(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
+
+In our Titanic example
 
 
 ```python

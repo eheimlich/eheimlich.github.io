@@ -109,11 +109,128 @@ Which means that $$\mu_i$$ must be positive.
 
 ## Finally an example
 
-If your head is spinning with all this math, don't worry we are about to apply our knowledge on a real world data set.
+If your head is spinning with all this math, don't worry we are about to apply our knowledge on a real world data set. We will be looking at the Titanic dataset from Kaggle [(Titanic Datset)](https://www.kaggle.com/c/titanic)
+
+```python
+my_data.head()
+```
 
 
-So what can we do? Let's check back to the distributions we can use with GLM, the exponential family. The Bernoulli distribution seems
-like a perfect candidate because it takes a value of 1 or 0 with a certain probability. Let's try to write out our GLM mathematically using the notation we used at the end of section 2.
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PassengerId</th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Ticket</th>
+      <th>Fare</th>
+      <th>Cabin</th>
+      <th>Embarked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Braund, Mr. Owen Harris</td>
+      <td>male</td>
+      <td>22.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>A/5 21171</td>
+      <td>7.2500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
+      <td>female</td>
+      <td>38.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>PC 17599</td>
+      <td>71.2833</td>
+      <td>C85</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Heikkinen, Miss. Laina</td>
+      <td>female</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>STON/O2. 3101282</td>
+      <td>7.9250</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
+      <td>female</td>
+      <td>35.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>113803</td>
+      <td>53.1000</td>
+      <td>C123</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Allen, Mr. William Henry</td>
+      <td>male</td>
+      <td>35.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>373450</td>
+      <td>8.0500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 
 ```python
@@ -129,8 +246,8 @@ print(model_results.summary())
     Model Family:                Binomial   Df Model:                            1
     Link Function:                  logit   Scale:                          1.0000
     Method:                          IRLS   Log-Likelihood:                -558.78
-    Date:                Thu, 24 Oct 2019   Deviance:                       1117.6
-    Time:                        15:43:46   Pearson chi2:                     934.
+    Date:                Thu, 14 Nov 2019   Deviance:                       1117.6
+    Time:                        11:15:20   Pearson chi2:                     934.
     No. Iterations:                     5   Covariance Type:             nonrobust
     ==============================================================================
                      coef    std err          z      P>|z|      [0.025      0.975]

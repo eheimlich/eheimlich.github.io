@@ -215,3 +215,4 @@ print(model_results.summary())
     Intercept     -0.9413      0.095     -9.895      0.000      -1.128      -0.755
     Fare           0.0152      0.002      6.809      0.000       0.011       0.020
     ==============================================================================
+Let's check the output from the GLM we just ran. In the top part of the output we have some important information such as confirmation of what  dependent variable is

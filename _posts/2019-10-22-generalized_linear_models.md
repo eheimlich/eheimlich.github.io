@@ -187,11 +187,12 @@ $$ln(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
 
 Since we are modeling whether someone survived based off their fare, we can write out what our $$X_i^T \beta$$ looks like:
 
-$$\beta$$ = \begin{bmatrix}
+\begin{align*}
+\beta = \begin{bmatrix}
            \beta_{0} \\
            \beta_{Fare}
          \end{bmatrix}
-
+\end{align*}
 
 ```python
 model = glm(formula = 'Survived ~ Fare', data = my_data, family = sm.families.Binomial())

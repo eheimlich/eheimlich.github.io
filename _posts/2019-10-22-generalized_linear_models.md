@@ -77,7 +77,7 @@ In order to make sure that the input to the Bernoulli distribution is between 0 
 
 $$Y_i \sim Bernoulli(\mu_i)$$
 
-$$log(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
+$$ln(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
 
 We added what's called the logit link function to turn the output of $$X_i^T \beta$$ into a value between 0 and 1. You can verify yourself that this guarantees that $$\mu_i$$ will be between 0 and 1.
 
@@ -111,7 +111,7 @@ Which means that $$\mu_i$$ must be positive.
 
 If your head is spinning with all this math, don't worry we are about to apply our knowledge on a real world data set.
 
-We will be looking at the Titanic dataset from Kaggle [(Titanic Datset)](https://www.kaggle.com/c/titanic). In this dataset we are looking at how certain characteristics affect the chance of survival for passengers on the Titanic.
+We will be looking at the Titanic dataset from Kaggle [(Titanic Datset)](https://www.kaggle.com/c/titanic). In this dataset we are looking at how certain characteristics affect the chance of survival for passengers on the Titanic. We will be using Python to do all of our modelling, but all of this can be done in R as well.
 
 The first row of the dataset is shown below. We can see a binary indicator for whether they survived or not, their class of travel, name, sex, age, fare, and more.
 
@@ -174,18 +174,25 @@ my_data.head(1)
 </table>
 </div>
 
-Let's start by doing a very simple Bernoulli GLM, aka a logistic regression. We are using
-a Bernoulli GLM because passenger survival is either they survived or didn't, a binary outcome. We will
-model whether a passenger survived or not just based on the fare they paid. 
+Let's start by doing a very simple Bernoulli GLM, also know as a logistic regression. We are using
+a Bernoulli GLM because passenger survival is either they survived or didn't, a binary outcome. We are
+modeling whether a passenger survived or not just based on the fare they paid.
 
 I know I said we were done with the math, but let's recall our mathematical model for a logistic regression:
 
 $$Y_i \sim Bernoulli(\mu_i)$$
 
-$$log(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
+$$ln(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
 
-In our Titanic example
 
+Since we are modeling whether someone survived based off their fare, we can write out what our $$X_i^T \beta$$ looks like:
+
+$$\beta = \begin{bmatrix}
+           \beta_{0} \\
+           \beta_{Fare}
+         \end{bmatrix}
+\end{align}
+$$
 
 ```python
 model = glm(formula = 'Survived ~ Fare', data = my_data, family = sm.families.Binomial())

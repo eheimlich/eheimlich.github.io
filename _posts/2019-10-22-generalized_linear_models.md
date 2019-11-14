@@ -185,16 +185,10 @@ $$Y_i \sim Bernoulli(\mu_i)$$
 $$ln(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
 
 
-Since we are modeling whether someone survived based off their fare, we can write out what our $$X_i^T \beta$$ looks like:
+Since we are modeling whether someone survived based off their fare, there are only two $$\beta$$'s: intercept and fare coefficients.
 
-$$
-\begin{align*}
-\beta = \begin{bmatrix}
-           \beta_{0} \\
-           \beta_{Fare}
-         \end{bmatrix}
-\end{align*}
-$$
+We will use the [(Statsmodels package)](https://www.statsmodels.org/stable/glm.html) to run our GLM, which is one of the ways to run GLM in Python. If you wanted to run the same analysis in R you could use the [(glm funcgtion)](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/glm.html) in the R stats package.
+
 ```python
 model = glm(formula = 'Survived ~ Fare', data = my_data, family = sm.families.Binomial())
 model_results = model.fit()

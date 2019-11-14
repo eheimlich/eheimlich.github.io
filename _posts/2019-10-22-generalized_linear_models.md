@@ -187,7 +187,7 @@ $$ln(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
 
 Since we are modeling whether someone survived based off their fare, there are only two $$\beta$$'s: intercept and fare coefficients.
 
-We will use the [(Statsmodels package)](https://www.statsmodels.org/stable/glm.html) to run our GLM, which is one of the ways to run GLM in Python. If you wanted to run the same analysis in R you could use the [(glm funcgtion)](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/glm.html) in the R stats package.
+We will use the [(Statsmodels package)](https://www.statsmodels.org/stable/glm.html) to run our GLM, which is one of the ways to run GLM in Python. If you wanted to run the same analysis in R you could use the [(glm function)](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/glm.html) in the R stats package.
 
 In the Python code below, we designate the variable Survived as our outcome and Fare as our only independent variable. We then specify the Binomial distribution as our distribution family. Wait a second, didn't we say before that we are using a Bernoulli distribution?
 

@@ -107,7 +107,7 @@ Which means that $$\mu_i$$ must be positive.
 
 
 
-## Finally an example
+## Finally an example!
 
 If your head is spinning with all this math, don't worry we are about to apply our knowledge on a real world data set.
 
@@ -188,6 +188,10 @@ $$ln(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
 Since we are modeling whether someone survived based off their fare, there are only two $$\beta$$'s: intercept and fare coefficients.
 
 We will use the [(Statsmodels package)](https://www.statsmodels.org/stable/glm.html) to run our GLM, which is one of the ways to run GLM in Python. If you wanted to run the same analysis in R you could use the [(glm funcgtion)](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/glm.html) in the R stats package.
+
+In the Python code below, we designate the variable Survived as our outcome and Fare as our only independent variable. We then specify the Binomial distribution as our distribution family. Wait a second, didn't we say before that we are using a Bernoulli distribution?
+
+It turns out that the Bernoulli distribution is just a special case of the Binomial distribution with one trial. For more information on the Bernoulli distribution feel free to check out [Bernoulli distribution] (https://en.wikipedia.org/wiki/Bernoulli_distribution).
 
 ```python
 model = glm(formula = 'Survived ~ Fare', data = my_data, family = sm.families.Binomial())

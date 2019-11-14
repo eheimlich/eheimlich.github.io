@@ -191,7 +191,7 @@ We will use the [(Statsmodels package)](https://www.statsmodels.org/stable/glm.h
 
 In the Python code below, we designate the variable Survived as our outcome and Fare as our only independent variable. We then specify the Binomial distribution as our distribution family. Wait a second, didn't we say before that we are using a Bernoulli distribution?
 
-It turns out that the Bernoulli distribution is just a special case of the Binomial distribution with one trial. For more information on the Bernoulli distribution feel free to check out [Bernoulli distribution] (https://en.wikipedia.org/wiki/Bernoulli_distribution).
+It turns out that the Bernoulli distribution is just a special case of the Binomial distribution with one trial. For more information on the Bernoulli distribution feel free to check out [(Bernoulli distribution)](https://en.wikipedia.org/wiki/Bernoulli_distribution).
 
 ```python
 model = glm(formula = 'Survived ~ Fare', data = my_data, family = sm.families.Binomial())

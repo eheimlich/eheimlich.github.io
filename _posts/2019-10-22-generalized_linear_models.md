@@ -107,7 +107,7 @@ Which means that $$\mu_i$$ must be positive.
 
 
 
-## Finally an example!
+## Finally an example
 
 If your head is spinning with all this math, don't worry we are about to apply our knowledge on a real world data set.
 
@@ -216,5 +216,20 @@ print(model_results.summary())
     Fare           0.0152      0.002      6.809      0.000       0.011       0.020
     ==============================================================================
 
-    
-Let's check the output from the GLM we just ran. In the top part of the output we have some important information such as confirmation of what  dependent variable is
+
+Let's check the output from the GLM we just ran. In the top part of the output we have some important metadata,
+such as the link function, degrees of freedom, and more. The second part has our estimates for the coefficients in our model, i.e. our $$\beta$$'s.
+
+## How do we interpret the results?
+
+We can see in the bottom half of the output table above two rows, one for the intercept and one for our only covariate, fare. We can see that Python's estimate for the fare coefficient is 0.0152. What does that even mean?
+
+Let's take a trip back to the start of this post and think about if this were linear regression how would we interpret that number. If this were a linear regression, we would say that a one unit increase in fare leads to a .0152 of whatever our outcome is holding all else equal. However, we know we are working with logistic regression and therefore the logit link function instead of the identity.
+
+Let's look back at our link function:
+
+$$ln(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
+
+Now, we can say that a one unit increase in fare leads to a .0152 in the log odds of surviving. What are the log odds?
+
+  

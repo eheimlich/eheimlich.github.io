@@ -236,3 +236,7 @@ $$ln(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
 Now, we can say that a one unit increase in fare leads to a .0152 in the log odds of surviving while holding age constant.
 
 What are the log odds? The log odds is the left hand side of the equation above: $$ln(\frac{\mu_i}{1- \mu_i})$$.
+
+The log odds are difficult to interpret so we can take $$e ^ {ln(\frac{\mu_i}{1- \mu_i})} = \frac{\mu_i}{1- \mu_i}$$, and get the odds. Since $$e^{.0152} = 1.0153$$, we can say that the odds of someone surviving the titanic is 1.0153 times the odds of someone who paid $1 less in fare holding their age constant.
+
+Now that was quite a mouthful, let's try to interpret the age coefficient. Since we have used the logit link function the coefficent for age represents the log odds. To extract the odds we will first take $$e^{}

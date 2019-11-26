@@ -176,7 +176,7 @@ my_data.head(1)
 
 Let's start by doing a very simple Bernoulli GLM, also know as a logistic regression. We are using
 a Bernoulli GLM because passenger survival is either they survived or didn't, a binary outcome. We are
-modeling whether a passenger survived or not just based on the fare they paid.
+modeling whether a passenger survived or not based on the fare they paid and their sex.
 
 I know I said we were done with the math, but let's recall our mathematical model for a logistic regression:
 
@@ -185,7 +185,7 @@ $$Y_i \sim Bernoulli(\mu_i)$$
 $$ln(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
 
 
-Since we are modeling whether someone survived based off their fare, there are only two $$\beta$$'s: intercept and fare coefficients.
+Since we are modeling whether someone survived based off their fare, there are three $$\beta$$'s: intercept, fare, and sex coefficients.
 
 We will use the [(Statsmodels package)](https://www.statsmodels.org/stable/glm.html) to run our GLM, which is one of the ways to run GLM in Python. If you wanted to run the same analysis in R you could use the [(glm function)](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/glm.html) in the R stats package.
 
@@ -193,8 +193,9 @@ In the Python code below, we designate the variable Survived as our outcome and 
 
 It turns out that the Bernoulli distribution is just a special case of the Binomial distribution with one trial. For more information on the Bernoulli distribution feel free to check out [(Bernoulli distribution)](https://en.wikipedia.org/wiki/Bernoulli_distribution).
 
+
 ```python
-model = glm(formula = 'Survived ~ Fare', data = my_data, family = sm.families.Binomial())
+model = glm(formula = 'Survived ~ Fare + Sex', data = my_data, family = sm.families.Binomial())
 model_results = model.fit()
 print(model_results.summary())
 ```
@@ -202,19 +203,20 @@ print(model_results.summary())
                      Generalized Linear Model Regression Results                  
     ==============================================================================
     Dep. Variable:               Survived   No. Observations:                  891
-    Model:                            GLM   Df Residuals:                      889
-    Model Family:                Binomial   Df Model:                            1
+    Model:                            GLM   Df Residuals:                      888
+    Model Family:                Binomial   Df Model:                            2
     Link Function:                  logit   Scale:                          1.0000
-    Method:                          IRLS   Log-Likelihood:                -558.78
-    Date:                Thu, 14 Nov 2019   Deviance:                       1117.6
-    Time:                        11:15:20   Pearson chi2:                     934.
+    Method:                          IRLS   Log-Likelihood:                -442.16
+    Date:                Tue, 26 Nov 2019   Deviance:                       884.31
+    Time:                        16:59:37   Pearson chi2:                     870.
     No. Iterations:                     5   Covariance Type:             nonrobust
-    ==============================================================================
-                     coef    std err          z      P>|z|      [0.025      0.975]
-    ------------------------------------------------------------------------------
-    Intercept     -0.9413      0.095     -9.895      0.000      -1.128      -0.755
-    Fare           0.0152      0.002      6.809      0.000       0.011       0.020
-    ==============================================================================
+    ===============================================================================
+                      coef    std err          z      P>|z|      [0.025      0.975]
+    -------------------------------------------------------------------------------
+    Intercept       0.6471      0.149      4.358      0.000       0.356       0.938
+    Sex[T.male]    -2.4228      0.171    -14.208      0.000      -2.757      -2.089
+    Fare            0.0112      0.002      4.886      0.000       0.007       0.016
+    ===============================================================================
 
 
 Let's check the output from the GLM we just ran. In the top part of the output we have some important metadata,
@@ -231,5 +233,3 @@ Let's look back at our link function:
 $$ln(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
 
 Now, we can say that a one unit increase in fare leads to a .0152 in the log odds of surviving. What are the log odds?
-
-  

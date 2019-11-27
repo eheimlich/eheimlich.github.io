@@ -254,3 +254,5 @@ $$Y_i \sim Poisson(\lambda_i)$$
 $$ln(\lambda_i) = X_i^T \beta $$
 
 Notice how we used the log(natural) link function in the Poisson distribution since the $$\lambda$$ parameter of the Poisson distribution needs to be positive.
+
+Since the link function is ln, there are no odds to speak of. When interpreting the coefficients we would just exponentiate them and then we could say that a one unit change in the variable of interest leads to that amount of change in the expected counts. 

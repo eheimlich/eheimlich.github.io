@@ -253,4 +253,4 @@ $$Y_i \sim Poisson(\lambda_i)$$
 
 $$ln(\lambda_i) = X_i^T \beta $$
 
-Notice how we used
+Notice how we used the log(natural) link function in the Poisson distribution since the $$\lambda$$ parameter of the Poisson distribution needs to be positive.

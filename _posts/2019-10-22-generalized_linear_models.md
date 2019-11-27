@@ -38,9 +38,9 @@ Now let's rewrite multiple linear regression one more time:
 
 $$Y_i \sim N(\mu_i, \sigma^2)$$
 
-$$\mu_i = X_i^T \beta $$
+$$\mu_i = X_i \beta $$
 
-What we are saying here is that the outcome for each observation is normally distributed with a mean of $$\mu_i$$ and variance of $$\sigma^2$$. In order to find $$\mu_i$$ for each observation we just find the output of the covariates and coefficients, $$ X_i^T \beta$$.
+What we are saying here is that the outcome for each observation is normally distributed with a mean of $$\mu_i$$ and variance of $$\sigma^2$$. In order to find $$\mu_i$$ for each observation we just find the output of the covariates and coefficients, $$ X_i \beta$$.
 
 In this third formulation of multiple linear regression, we still haven't changed anything mathematically. We are only doing this to make it easier to **generalize** multiple linear regression later.   
 
@@ -68,18 +68,18 @@ Could this below be a good way to model drug rehab completion?
 
 $$Y_i \sim Bernoulli(\mu_i)$$
 
-$$\mu_i = X_i^T \beta $$
+$$\mu_i = X_i \beta $$
 
-Well there is a slight problem with this notation. We can see here that $$\mu_i$$ can be any positive or negative number as it just depends on $$X_i^T \beta$$. However, the parameter for the Bernoulli distribution must be between 0 and 1 since it is a probability. This leads us to the next topic of this post, link functions.
+Well there is a slight problem with this notation. We can see here that $$\mu_i$$ can be any positive or negative number as it just depends on $$X_i \beta$$. However, the parameter for the Bernoulli distribution must be between 0 and 1 since it is a probability. This leads us to the next topic of this post, link functions.
 
 ## Link functions
 In order to make sure that the input to the Bernoulli distribution is between 0 and 1, let's add what's called a link function to transform the output from the covariates into something that our distribution can handle.
 
 $$Y_i \sim Bernoulli(\mu_i)$$
 
-$$ln(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
+$$ln(\frac{\mu_i}{1- \mu_i}) = X_i \beta $$
 
-We added what's called the logit link function to turn the output of $$X_i^T \beta$$ into a value between 0 and 1. You can verify yourself that this guarantees that $$\mu_i$$ will be between 0 and 1.
+We added what's called the logit link function to turn the output of $$X_i \beta$$ into a value between 0 and 1. You can verify yourself that this guarantees that $$\mu_i$$ will be between 0 and 1.
 
 In fact, you may have come across this model before, this is simply **logistic regression**. Let's take a step back for a second, logistic regression is just a generalized linear model with the logit link function.
 
@@ -87,7 +87,7 @@ In fact, every single GLM has a link function. Wait a second, didn't we say that
 
 $$Y_i \sim N(\mu_i, \sigma^2)$$
 
-$$\mu_i = X_i^T \beta $$
+$$\mu_i = X_i \beta $$
 
 There is a link function in there, it's just slightly hidden. It's called the identity link function because it doesn't change $$\mu_i$$ at all. Remember, we don't need to change $$\mu_i$$ because the supported domain of the normal distribution is all real numbers.
 
@@ -96,11 +96,11 @@ if we were doing a Poisson GLM we would use the log link which is just the natur
 
 We can see this simply when we solve for $$\mu_i$$:
 
-$$ln(\mu_i) = X_i^T \beta$$
+$$ln(\mu_i) = X_i \beta$$
 
 That implies that:
 
-$$\mu_i = e^{X_i^T \beta}$$
+$$\mu_i = e^{X_i \beta}$$
 
 Which means that $$\mu_i$$ must be positive.
 
@@ -182,7 +182,7 @@ I know I said we were done with the math, but let's recall our mathematical mode
 
 $$Y_i \sim Bernoulli(\mu_i)$$
 
-$$ln(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
+$$ln(\frac{\mu_i}{1- \mu_i}) = X_i \beta $$
 
 
 Since we are modeling whether someone survived based off their fare, there are three $$\beta$$'s: intercept, fare, and age coefficients.
@@ -231,7 +231,7 @@ However, we know we are working with logistic regression and therefore the logit
 
 Let's look back at our link function:
 
-$$ln(\frac{\mu_i}{1- \mu_i}) = X_i^T \beta $$
+$$ln(\frac{\mu_i}{1- \mu_i}) = X_i \beta $$
 
 Now, we can say that a one unit increase in fare leads to a .0152 in the log odds of surviving while holding age constant.
 
@@ -251,8 +251,8 @@ For example, imagine we were doing Poisson regression with the following form:
 
 $$Y_i \sim Poisson(\lambda_i)$$
 
-$$ln(\lambda_i) = X_i^T \beta $$
+$$ln(\lambda_i) = X_i \beta $$
 
 Notice how we used the log(natural) link function in the Poisson distribution since the $$\lambda$$ parameter of the Poisson distribution needs to be positive.
 
-Since the link function is ln, there are no odds to speak of. When interpreting the coefficients we would just exponentiate them and then we could say that a one unit change in the variable of interest leads to that amount of change in the expected counts. 
+Since the link function is ln, there are no odds to speak of. When interpreting the coefficients we would just exponentiate them and then we could say that a one unit change in the variable of interest leads to that amount of change in the expected counts.

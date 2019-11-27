@@ -221,7 +221,7 @@ print(model_results.summary())
 Let's check the output from the GLM we just ran. In the top part of the output we have some important metadata,
 such as the link function, degrees of freedom, and more. The second part has our estimates for the coefficients in our model, i.e. our $$\beta$$'s.
 
-## How do we interpret the results?
+## Interpretation of Logistic Regression
 
 We can see in the bottom half of the output table above, three rows, one for the intercept and two for our covariates. We can see that Python's estimate for the fare coefficient is 0.0152 and -.0176 for the age coefficient. What do these numbers even mean?
 
@@ -237,10 +237,14 @@ Now, we can say that a one unit increase in fare leads to a .0152 in the log odd
 
 What are the log odds? The log odds is the left hand side of the equation above: $$ln(\frac{\mu_i}{1- \mu_i})$$.
 
-The log odds are difficult to interpret so we can take $$e ^ {ln(\frac{\mu_i}{1- \mu_i})} = \frac{\mu_i}{1- \mu_i}$$, and get the odds. Since $$e^{.0152} = 1.0153$$, we can say that the odds of someone surviving the titanic is 1.0153 times the odds of someone who paid $1 less in fare holding their age constant. Which means that if person A is a 40 year old who paid $100 for their ticket and person B is a 40 year old who paid $50 dollars, then person A would have $$ e^{(100-50) * 0.0173} = 2.375 $$ times the odds of surviving compared to person B.
+The log odds are difficult to interpret so we can take $$e ^ {ln(\frac{\mu_i}{1- \mu_i})} = \frac{\mu_i}{1- \mu_i}$$, and get the odds. Since $$e^{.0152} = 1.0153$$, we can say that the odds of someone surviving the titanic is 1.0153 times the odds of someone who paid $1 less in fare holding their age constant. Which means that if Alice, a 40 year old who paid $100 for their ticket and Daniel, a 40 year old who paid $50 dollars, then Alice would have $$ e^{(100-50) * 0.0173} = 2.375 $$ times the odds of surviving compared to Daniel.
 
 Now that was quite a mouthful, let's try to interpret the age coefficient.
 
-Since we have used the logit link function the coefficient for age represents the log odds. To extract the odds we will first take $$e^{-0.0176} = 0.983$$. Therefore, we can say that if person C is 21 years old and paid $200 for their ticket than they would have .983 times the odds of surviving relative to a person D who is 20 years old and also paid $200 for their ticket.
+Since we have used the logit link function the coefficient for age represents the log odds. To extract the odds we will first take $$e^{-0.0176} = 0.983$$. Therefore, we can say that if Raphael is 21 years old and paid $200 for their ticket than they would have .983 times the odds of surviving relative to Michael, a 20 years old, who also paid $200 for their ticket.
 
-It's important to remember that our interpretation relied on the logit link function. The interpretation for different distributions are going to be different, because they may have different link functions. 
+## Interpretation of other GLMs
+
+It's important to remember that our interpretation relied on the logit link function. The interpretation for different distributions is going to be different, because they may have different link functions.
+
+For example, 

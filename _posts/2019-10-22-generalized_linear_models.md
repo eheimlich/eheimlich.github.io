@@ -241,4 +241,6 @@ The log odds are difficult to interpret so we can take $$e ^ {ln(\frac{\mu_i}{1-
 
 Now that was quite a mouthful, let's try to interpret the age coefficient.
 
-Since we have used the logit link function the coefficient for age represents the log odds. To extract the odds we will first take $$e^{-0.0176} = 0.983$$. Therefore, we can say that if person C is 21 years old and paid $200 for their ticket than they would have .983 times the odds of surviving relative to a person D who is 20 years old and also paid $200 for their ticket. 
+Since we have used the logit link function the coefficient for age represents the log odds. To extract the odds we will first take $$e^{-0.0176} = 0.983$$. Therefore, we can say that if person C is 21 years old and paid $200 for their ticket than they would have .983 times the odds of surviving relative to a person D who is 20 years old and also paid $200 for their ticket.
+
+It's important to remember that our interpretation relied on the logit link function. The interpretation for different distributions are going to be different, because they may have different link functions. 

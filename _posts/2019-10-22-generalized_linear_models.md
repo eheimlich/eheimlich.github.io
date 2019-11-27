@@ -239,4 +239,6 @@ What are the log odds? The log odds is the left hand side of the equation above:
 
 The log odds are difficult to interpret so we can take $$e ^ {ln(\frac{\mu_i}{1- \mu_i})} = \frac{\mu_i}{1- \mu_i}$$, and get the odds. Since $$e^{.0152} = 1.0153$$, we can say that the odds of someone surviving the titanic is 1.0153 times the odds of someone who paid $1 less in fare holding their age constant. Which means that if person A is a 40 year old who paid $100 for their ticket and person B is a 40 year old who paid $50 dollars, then person A would have $$ e^{(100-50) * 0.0173} = 2.375 $$ times the odds of surviving compared to person B.
 
-Now that was quite a mouthful, let's try to interpret the age coefficient. Since we have used the logit link function the coefficient for age represents the log odds. To extract the odds we will first take $$e^{-0.0176} = 0.983$$. Therefore, we can that person C a   
+Now that was quite a mouthful, let's try to interpret the age coefficient.
+
+Since we have used the logit link function the coefficient for age represents the log odds. To extract the odds we will first take $$e^{-0.0176} = 0.983$$. Therefore, we can say that if person C is 21 years old and paid $200 for their ticket than they would have .983 times the odds of surviving relative to a person D who is 20 years old and also paid $200 for their ticket. 

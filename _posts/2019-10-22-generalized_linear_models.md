@@ -247,4 +247,10 @@ Since we have used the logit link function the coefficient for age represents th
 
 It's important to remember that our interpretation relied on the logit link function. The interpretation for different distributions is going to be different, because they may have different link functions.
 
-For example, 
+For example, imagine we were doing Poisson regression with the following form:
+
+$$Y_i \sim Poisson(\lambda_i)$$
+
+$$ln(\lambda_i) = X_i^T \beta $$
+
+Notice how we used

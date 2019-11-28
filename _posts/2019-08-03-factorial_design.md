@@ -18,6 +18,11 @@ A/B testing is the gold standard for quantifying the effect of a treatment. Some
 
 A/B testing is what we call a randomized controlled trial with one **factor** and two **levels**. That is a fancy way of saying that we are varying one aspect and have two different quantities which we are testing. For example, suppose one was interested in whether Aspirin helps to prevent heart attacks. We would give the test group a dose of Aspirin and the holdout group a placebo. In this example, the factor is Aspirin and the two levels are 325mg and 0mg.
 
+| Experimental Group      | Treatment         | Control  |
+| ------------- |:-------------:| -----:|
+| 1      | Yes | No |
+| 2     | No      |   Yes |
+
 
 ```
 

@@ -258,8 +258,24 @@ In this design the **main** effects of Phone, Direct Mail, SMS and Gift Cards ar
 
 Lets illustrate the **fractional factorial design** in a similar table as the full factorial design:
 
-
-
+| Experimental Group      | Phone     | Direct Mail  | SMS | Email | Gift Card|
+| ------------- |:-------------:| -----:| -------:| -------:| -------:|
+| 1      | Yes | Yes | Yes | Yes| Yes|
+| 2      | Yes | Yes | Yes | No | No |
+| 3      | Yes | Yes | No | Yes | No |
+| 4      | Yes | Yes | No | No | No |
+| 5      | Yes | No | Yes | Yes| No |
+| 6      | Yes | No | Yes | No | No|
+| 7      | Yes | No | No | Yes | Yes|
+| 8      | Yes | No | No | No| Yes|
+| 9       | No | Yes | Yes | Yes| No |
+| 10      | No | Yes | Yes | No | No |
+| 11      | No | Yes | No | Yes | Yes|
+| 12      | No | Yes | No | No | Yes |
+| 13      | No | No | Yes | Yes| Yes|
+| 14      | No | No | Yes | No | Yes|
+| 15      | No | No | No | Yes | No |
+| 16      | No | No | No | No | No|
 
 
 ```

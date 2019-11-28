@@ -29,7 +29,7 @@ distribution.
 
 Now let's rewrite the previous model using matrix notation to make our lives easier:
 
-$$ Y_i = X_i^{T} \beta + \epsilon_i $$
+$$ Y_i = X_i \beta + \epsilon_i $$
 
 Where $$Y_i$$ is the response for the ith observation. $$ X_i $$ is the vector of covariates
 for the ith observation. $$\beta$$ is a vector of the coefficients of the model. Finally, $$\epsilon_i$$ is the residual term for each observation. It is important to note that we haven't changed anything mathematically.

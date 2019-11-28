@@ -38,7 +38,12 @@ A/B testing is what we call a randomized controlled trial with one **factor** an
 However, what if we were interested in looking at the effect of not only Aspirin but also Lipitor on preventing heart attacks. What we could do is run two separate A/B tests each testing the drugs independently. However, this would require double the sample size of our original A/B test. A better solution is an experimental technique called a factorial design.
 
 
-
+| Experimental Group      | Received Aspirin         | Received Lipitor  |
+| ------------- |:-------------:| -----:|
+| 1      | Yes | Yes |
+| 2     | Yes      |   No |
+| 3      | No | Yes |
+| 4     | No      |   No |
 
 
 ```

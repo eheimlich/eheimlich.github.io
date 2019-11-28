@@ -46,22 +46,6 @@ However, what if we were interested in looking at the effect of not only Aspirin
 | 4     | No      |   No |
 
 
-```
-
-##   Experimental_Group Received_Aspirin Received_Lipitor
-
-## 1                  1              Yes              Yes
-
-## 2                  2              Yes               No
-
-## 3                  3               No              Yes
-
-## 4                  4               No               No
-
-```
-
-
-
 Each of the experimental units would be randomly assigned to one of the four groups. This is known as a 2 x 2 factorial design because there are two **factors**(Aspirin & Lipitor) which each have 2 **levels** (either taking the drug or the placebo).
 
 
@@ -119,79 +103,6 @@ For example, experimental group #1 will receive Phone, Direct Mail, SMS, Email a
 | 30      | No | No | No | Yes| No|
 | 31      | No | No | No | No | Yes|
 | 32      | No | No | No | No | Yes|
-
-
-```
-
-##    Experimental_Group Phone Direct_Mail SMS Email Gift_Card
-
-## 1                   1 Yes         Yes Yes   Yes       Yes
-
-## 2                   2 Yes         Yes Yes   Yes        No
-
-## 3                   3 Yes         Yes Yes    No       Yes
-
-## 4                   4 Yes         Yes Yes    No        No
-
-## 5                   5 Yes         Yes  No   Yes       Yes
-
-## 6                   6 Yes         Yes  No   Yes        No
-
-## 7                   7 Yes         Yes  No    No       Yes
-
-## 8                   8 Yes         Yes  No    No        No
-
-## 9                   9 Yes          No Yes   Yes       Yes
-
-## 10                 10 Yes          No Yes   Yes        No
-
-## 11                 11 Yes          No Yes    No       Yes
-
-## 12                 12 Yes          No Yes    No        No
-
-## 13                 13 Yes          No  No   Yes       Yes
-
-## 14                 14 Yes          No  No   Yes        No
-
-## 15                 15 Yes          No  No    No       Yes
-
-## 16                 16 Yes          No  No    No        No
-
-## 17                 17  No         Yes Yes   Yes       Yes
-
-## 18                 18  No         Yes Yes   Yes        No
-
-## 19                 19  No         Yes Yes    No       Yes
-
-## 20                 20  No         Yes Yes    No        No
-
-## 21                 21  No         Yes  No   Yes       Yes
-
-## 22                 22  No         Yes  No   Yes        No
-
-## 23                 23  No         Yes  No    No       Yes
-
-## 24                 24  No         Yes  No    No        No
-
-## 25                 25  No          No Yes   Yes       Yes
-
-## 26                 26  No          No Yes   Yes        No
-
-## 27                 27  No          No Yes    No       Yes
-
-## 28                 28  No          No Yes    No        No
-
-## 29                 29  No          No  No   Yes       Yes
-
-## 30                 30  No          No  No   Yes        No
-
-## 31                 31  No          No  No    No       Yes
-
-## 32                 32  No          No  No    No        No
-
-```
-
-
 
 
 
@@ -261,7 +172,7 @@ Lets illustrate the **fractional factorial design** in a similar table as the fu
 | Experimental Group      | Phone     | Direct Mail  | SMS | Email | Gift Card|
 | ------------- |:-------------:| -----:| -------:| -------:| -------:|
 | 1      | Yes | Yes | Yes | Yes| Yes|
-| 2      | Yes | Yes | Yes | No | No |
+| 2      | Yes | Yes | Yes | No | Yes |
 | 3      | Yes | Yes | No | Yes | No |
 | 4      | Yes | Yes | No | No | No |
 | 5      | Yes | No | Yes | Yes| No |
@@ -276,45 +187,6 @@ Lets illustrate the **fractional factorial design** in a similar table as the fu
 | 14      | No | No | Yes | No | Yes|
 | 15      | No | No | No | Yes | No |
 | 16      | No | No | No | No | No|
-
-
-```
-
-##    Experimental_Group Phone Direct_Mail SMS Email Gift_Card
-
-## 1                   1 Yes         Yes Yes   Yes       Yes
-
-## 2                   2 Yes         Yes Yes    No       Yes
-
-## 3                   3 Yes         Yes  No   Yes        No
-
-## 4                   4 Yes         Yes  No    No        No
-
-## 5                   5 Yes          No Yes   Yes        No
-
-## 6                   6 Yes          No Yes    No        No
-
-## 7                   7 Yes          No  No   Yes       Yes
-
-## 8                   8 Yes          No  No    No       Yes
-
-## 9                   9  No         Yes Yes   Yes        No
-
-## 10                 10  No         Yes Yes    No        No
-
-## 11                 11  No         Yes  No   Yes       Yes
-
-## 12                 12  No         Yes  No    No       Yes
-
-## 13                 13  No          No Yes   Yes       Yes
-
-## 14                 14  No          No Yes    No       Yes
-
-## 15                 15  No          No  No   Yes        No
-
-## 16                16  No          No  No    No        No
-
-```
 
 
 
@@ -342,30 +214,6 @@ Once we have run our experiment, we need to calculate the treatment effects. Rem
 | 8      | No | No | No | 1|
 
 
-```
-
-##   Experimental_Group Phone Email SMS Behavior_Change_Percent
-
-## 1                  1 Yes   Yes Yes                      12
-
-## 2                  2 Yes   Yes  No                       4
-
-## 3                  3 Yes    No Yes                       9
-
-## 4                  4 Yes    No  No                       5
-
-## 5                  5  No   Yes Yes                       7
-
-## 6                  6  No   Yes  No                       8
-
-## 7                  7  No    No Yes                       6
-
-## 8                  8  No    No  No                       1
-
-```
-
-
-
 From this table, how would we calculate the **main** effects of Phone, Email and SMS on behavior change? To calculate the effect of Phone we will compare each group that got an Phone with its counterpart that didn't but had the same Email and SMS levels. Then we will average all the of the difference between the pairs to get an overall main effect.
 
 
@@ -377,22 +225,7 @@ Lets look at how to calculate the main average **treatment** effect of Phone. Ou
 | Groups 1 & 5      | 12% - 7% = 5% |
 | Groups 2 & 6      | 4% - 8% = -4% |
 | Groups 3 & 7       | 9% -6% = 3% |
-| Groups 4 & 8      | 5% - 1% = 4% | 
-
-
-```
-Pair          Difference in Outcome
-
-Groups 1 & 5   12% - 7% = 5%
-
-Groups 2 & 6   4% - 8% = -4%
-
-Groups 3 & 7   9% - 6% = 3%
-
-Groups 4 & 8   5% - 1% = 4%
-
-```
-
+| Groups 4 & 8      | 5% - 1% = 4% |
 
 
 Thus, the **main** average treatment effect of Phone is mean(5% - 4% + 3% + 4%) = 2%. The process to calculate any of the other **main** average treatment effects is the same.

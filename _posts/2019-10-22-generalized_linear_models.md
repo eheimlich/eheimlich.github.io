@@ -256,3 +256,7 @@ $$ln(\lambda_i) = X_i \beta $$
 Notice how we used the log(natural) link function in the Poisson distribution since the $$\lambda$$ parameter of the Poisson distribution needs to be positive.
 
 Since the link function is ln, there are no odds to speak of. When interpreting the coefficients we would just exponentiate them and then we could say that a one unit change in the variable of interest leads to that amount of change in the expected counts.
+
+## Special thanks
+
+I want to give a special thanks to Professor Patrick Brown at the University of Toronto. He taught my course on applied statistics and most of my knowledge on GLMs can be attributed to his excellent class. Feel free to check out his website at [(pbrown.ca)](https://pbrown.ca).

@@ -221,7 +221,7 @@ print(model_results.summary())
 Let's check the output from the GLM we just ran. In the top part of the output we have some important metadata,
 such as the link function, degrees of freedom, and more. The second part has our estimates for the coefficients in our model, i.e. our $$\beta$$'s.
 
-## Interpretation of Logistic Regression
+## Interpretation of logistic regression
 
 We can see in the bottom half of the output table above, three rows, one for the intercept and two for our covariates. We can see that Python's estimate for the fare coefficient is 0.0152 and -.0176 for the age coefficient. What do these numbers even mean?
 
@@ -259,4 +259,4 @@ Since the link function is ln, there are no odds to speak of. When interpreting 
 
 ## Special thanks
 
-I want to give a special thanks to Professor Patrick Brown at the University of Toronto. He taught my course on applied statistics and most of my knowledge on GLMs can be attributed to his excellent class. 
+I want to give a special thanks to Professor Patrick Brown at the University of Toronto. He taught my course on applied statistics and most of my knowledge on GLMs can be attributed to his excellent class.

@@ -259,4 +259,4 @@ Since the link function is ln, there are no odds to speak of. When interpreting 
 
 ## Special thanks
 
-I want to give a special thanks to Professor Patrick Brown at the University of Toronto. He taught my course on applied statistics and most of my knowledge on GLMs can be attributed to his excellent class. Feel free to check out his website at [(pbrown.ca)](https://pbrown.ca).
+I want to give a special thanks to Professor Patrick Brown at the University of Toronto. He taught my course on applied statistics and most of my knowledge on GLMs can be attributed to his excellent class. Feel free to check out his website at [pbrown.ca](www.pbrown.ca).

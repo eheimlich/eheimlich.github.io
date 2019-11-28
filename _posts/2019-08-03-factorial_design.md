@@ -85,7 +85,40 @@ This is what we call a $$ 2^5 $$ factorial design because it has five different 
 For example, experimental group #1 will receive Phone, Direct Mail, SMS, Email and a Gift Card. While group #8 will only receive Phone and Direct Mail.
 
 
-
+| Experimental Group      | Phone     | Direct Mail  | SMS | Email | Gift Card|
+| ------------- |:-------------:| -----:| -------:| -------:| -------:|
+| 1      | Yes | Yes | Yes | Yes| Yes|
+| 2      | Yes | Yes | Yes | Yes| No |
+| 3      | Yes | Yes | Yes | No | Yes|
+| 4      | Yes | Yes | Yes | No | No |
+| 5      | Yes | Yes | No | Yes| Yes|
+| 6      | Yes | Yes | No | Yes| No|
+| 7      | Yes | Yes | No | No | Yes|
+| 8      | Yes | Yes | No | No| No|
+| 9       | Yes | No | Yes | Yes| Yes|
+| 10      | Yes | No | Yes | Yes| No |
+| 11      | Yes | No | Yes | No | Yes|
+| 12      | Yes | No | Yes | No | No |
+| 13      | Yes | No | No | Yes| Yes|
+| 14      | Yes | No | No | Yes| Yes|
+| 15      | Yes | No | No | No | Yes|
+| 16      | Yes | No | No | No | No|
+| 17      | No | Yes | Yes | Yes| Yes|
+| 18      | No | Yes | Yes | Yes| No|
+| 19      | No | Yes | Yes | No | Yes|
+| 20      | No | Yes | Yes | No | No |
+| 21      | No | Yes | No | Yes| Yes|
+| 22      | No | Yes | No | Yes| No|
+| 23      | No | Yes | No | No | Yes|
+| 24      | No | Yes | No | No | No |
+| 25      | No | No | Yes | Yes| Yes|
+| 26      | No | No | Yes | Yes| No |
+| 27      | No | No | Yes | No | Yes|
+| 28      | No | No  | Yes | No | No |
+| 29      | No | No | No | Yes| Yes|
+| 30      | No | No | No | Yes| No|
+| 31      | No | No | No | No | Yes|
+| 32      | No | No | No | No | Yes|
 
 
 ```

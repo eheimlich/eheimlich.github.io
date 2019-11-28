@@ -1,8 +1,8 @@
 ---
-title: "Factorial Design 101"
+title: "Factorial design 101"
 date: 2019-08-03
 tags: [Experimental Design, A/B Testing]
-excerpt: "Factorial Design 101"
+excerpt: "A deep dive into an alternative to A/B testing "
 mathjax: True
 header:
   image: "/images/lab_experiment.jpg"
@@ -19,16 +19,12 @@ A/B testing is the gold standard for quantifying the effect of a treatment. Some
 A/B testing is what we call a randomized controlled trial with one **factor** and two **levels**. That is a fancy way of saying that we are varying one aspect and have two different quantities which we are testing. For example, suppose one was interested in whether Aspirin helps to prevent heart attacks. We would give the test group a dose of Aspirin and the holdout group a placebo. In this example, the factor is Aspirin and the two levels are 325mg and 0mg.
 
 
-
-
-
 ```
 
-##   Experimental_Group Treatment Control
+  Experimental_Group Treatment Control
+                  1       Yes      No
 
-## 1                  1       Yes      No
-
-## 2                  2        No     Yes
+                  2        No     Yes
 
 ```
 

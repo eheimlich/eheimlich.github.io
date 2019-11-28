@@ -2,7 +2,7 @@
 title: "Introduction to generalized linear models"
 date: 2019-10-22
 tags: [Machine Learning, Python, Mathematics, Statistics]
-excerpt: "Linear Regression"
+excerpt: "A look at one of the most fundamental statistical models"
 mathjax: True
 ---
 

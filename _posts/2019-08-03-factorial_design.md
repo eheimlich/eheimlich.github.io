@@ -8,7 +8,7 @@ header:
   image: "/images/lab_experiment.jpg"
 ---
 
-## Motivation & Simple Example:
+## Why learn factorial design when we know how to do an A/B test?
 
 
 
@@ -44,7 +44,7 @@ What we have essentially done is combined two unrelated experiments into one. Th
 
 
 
-## Relevant Example
+## How could we do a factorial experiment?
 
 
 
@@ -104,7 +104,7 @@ Once we have created the design table, we are going to need to assign the member
 
 
 
-## Fractional Factorial Designs
+## What if we can't complete a factorial design?
 
 
 
@@ -184,9 +184,7 @@ It is important to note that we could also have a $$ 2^{5-2} $$ design if we onl
 
 
 
-## Calculating Treatment Effects
-
-
+## How do we calculate treatment effects?
 
 Once we have run our experiment, we need to calculate the treatment effects. Remember, that is the whole reason why we are running an experiment in the first place! Lets use a simple example of a $$ 2^3 $$ fractional design. We will have three treatments and an outcome variable which will be behavior change percentage.
 
@@ -230,7 +228,7 @@ The interaction effect is half the difference between the two numbers we just ca
 
 
 
-## Power Analysis for Factorial Designs
+## How do we calculate power in a factorial design?
 
 
 
@@ -250,7 +248,7 @@ However, in a factorial design if the expected effect size of an added treatment
 
 
 
-## Advantages of Factorial Designs
+## Advantages of factorial designs
 
 
 
@@ -266,7 +264,7 @@ However, in a factorial design if the expected effect size of an added treatment
 
 
 
-## Downsides of Factorial Designs
+## Downsides of factorial designs
 
 
 
@@ -284,7 +282,7 @@ However, in a factorial design if the expected effect size of an added treatment
 
 
 
-## Further Resources
+## Further resources
 
 
 
@@ -296,7 +294,7 @@ However, in a factorial design if the expected effect size of an added treatment
 
 
 
-## Special Thanks
+## Special thanks
 
 
 

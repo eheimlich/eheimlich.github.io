@@ -16,7 +16,7 @@ A/B testing is the gold standard for quantifying the effect of a treatment. Some
 
 
 
-A/B testing is what we call a randomized controlled trial with one **factor** and two **levels**. That is a fancy way of saying that we are varying one aspect and have two different quantities which we are testing. For example, suppose one was interested in whether Aspirin helps to prevent heart attacks. We would give the test group a dose of Aspirin and the holdout group a placebo. In this example, the factor is Aspirin and the two levels are 325mg and 0mg.
+A/B testing is what we call a randomized controlled trial with one **factor** and two **levels**. That is a fancy way of saying that we are varying one aspect and have two different quantities which we are testing. For example, suppose one was interested in whether Aspirin helps to prevent heart attacks. We would give the test group a dose of Aspirin and the holdout group a placebo. In this example, the factor is Aspirin and the two levels are whether they received a dose or not.
 
 | Experimental Group      | Treatment         | Control  |
 | ------------- |:-------------:| -----:|
@@ -25,7 +25,7 @@ A/B testing is what we call a randomized controlled trial with one **factor** an
 
 
 
-However, what if we were interested in looking at the effect of not only Aspirin but also Lipitor on preventing heart attacks. What we could do is run two separate A/B tests each testing the drugs independently. However, this would require double the sample size of our original A/B test. A better solution is an experimental technique called a factorial design.
+However, what if we were interested in looking at the effect of not only Aspirin but another drug such as Lipitor on preventing heart attacks. What we could do is run two separate A/B tests each testing the drugs independently. However, this would require double the sample size of our original A/B test. A better solution is an experimental technique called a factorial design.
 
 
 | Experimental Group      | Received Aspirin         | Received Lipitor  |
@@ -36,7 +36,7 @@ However, what if we were interested in looking at the effect of not only Aspirin
 | 4     | No      |   No |
 
 
-Each of the experimental units would be randomly assigned to one of the four groups. This is known as a 2 x 2 factorial design because there are two **factors**(Aspirin & Lipitor) which each have 2 **levels** (either taking the drug or the placebo).
+Each of the experimental units would be randomly assigned to one of the four groups. This is known as a 2 x 2 factorial design because there are two **factors**, Aspirin & Lipitor, which each have 2 **levels**, either taking the drug or the placebo.
 
 
 
@@ -48,15 +48,14 @@ What we have essentially done is combined two unrelated experiments into one. Th
 
 
 
-Lets say we are trying to evaluate five different outreach and incentive options in a consumer facing marketing campaign. For example, we want to evaluate Phone, direct mail, SMS, email and gift card incentives on a specific behavior change. We don't only want to see the **main** effects that each of the outreach options has on the outcome, but also the **interaction** effects between the different outreach options. In order to do so, we are going to need to use a **factorial design**!
-
+Lets say we are trying to evaluate five different outreach and incentive options in a consumer facing marketing campaign. For example, we want to evaluate a phone call, direct mail, SMS, email, and gift card incentives on a specific behavior change. We don't only want to see the **main** effects that each of the outreach options has on the outcome, but also the **interaction** effects between the different outreach options. In order to do so, we are going to need to use a **factorial design**!
 
 
 This is what we call a $$ 2^5 $$ factorial design because it has five different **factors** with two **levels** each. The $$ 2^5 $$ notation is convenient because it quickly tells us how many different treatment combinations we are going to need. In this case we will need 32 distinct treatment combinations in order to evaluate all five main effects, ten 2-factor effects, ten 3-factor effects, five 4-factor effects and one 5-factor effect. We can illustrate the design in a table.
 
 
 
-For example, experimental group #1 will receive Phone, Direct Mail, SMS, Email and a Gift Card. While group #8 will only receive Phone and Direct Mail.
+For example, experimental group #1 will receive a phone call, direct mail, SMS, email, and a gift card. While group #8 will only receive a phone call and direct mail.
 
 
 | Experimental Group      | Phone     | Direct Mail  | SMS | Email | Gift Card|
@@ -96,7 +95,9 @@ For example, experimental group #1 will receive Phone, Direct Mail, SMS, Email a
 
 
 
-The table was designed in such a way to maintain a fundamental principle of experimental design, **orthogonality**. A design is orthogonal if the dot product between each combination of every factor is equal to 0. For example, the dot product between the Phone vector and the Direct Mail vector is equal to 0. You can check the arithmetic on your own by summing the product of each row between the Phone and Direct Mail columns. **Orthogonality** guarantees that the effect of one factor or interaction can be estimated separately from the effect of any other factor or interaction in the model [2].
+The table was designed in such a way to maintain a fundamental principle of experimental design, **orthogonality**. A design is orthogonal if the dot product between each combination of every factor is equal to 0.
+
+For example, the dot product between the Phone vector and the Direct Mail vector is equal to 0. You can check the arithmetic on your own by summing the product of each row between the Phone and Direct Mail columns. **Orthogonality** guarantees that the effect of one factor or interaction can be estimated separately from the effect of any other factor or interaction in the model [2].
 
 
 

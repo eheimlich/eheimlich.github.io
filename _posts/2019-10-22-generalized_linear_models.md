@@ -7,7 +7,7 @@ mathjax: True
 ---
 
 ## Introduction
-I recently came across generalized linear models in one of my statistics classes at the University of Toronto. I was blown away by the power and simplicity of GLM's and how applicable they can be in industry. In this post I am going to be walking through what they are, how to use them, and some examples of GLM's used on real world data.  
+I recently came across generalized linear models in one of my statistics classes at the University of Toronto. I was blown away by the power and simplicity of GLMs and how applicable they can be to solve a wide variety of problems. In this post I am going to be walking through what they are, how to use them, and some examples of GLM's used on real world data.  
 
 Generalized linear models are simply a **generalization** of linear regression to fit other types of data. In this post I am going to be walking through the basics of GLM's by first quickly recapping linear regression.
 
@@ -29,14 +29,14 @@ distribution.
 
 Now let's rewrite the previous model using matrix notation to make our lives easier:
 
-$$ Y_i = X_i \beta + \epsilon_i $$
+$$ y_i = X_i \beta + \epsilon_i $$
 
-Where $$Y_i$$ is the response for the ith observation. $$ X_i $$ is the vector of covariates
+Where $$y_i$$ is the response for the ith observation. $$ X_i $$ is the vector of covariates
 for the ith observation. $$\beta$$ is a vector of the coefficients of the model. Finally, $$\epsilon_i$$ is the residual term for each observation. It is important to note that we haven't changed anything mathematically.
 
 Now let's rewrite multiple linear regression one more time:
 
-$$Y_i \sim N(\mu_i, \sigma^2)$$
+$$y_i \sim Normal(\mu_i, \sigma^2)$$
 
 $$\mu_i = X_i \beta $$
 
@@ -66,7 +66,7 @@ The Bernoulli distribution has only 1 parameter which is the probability of bein
 
 Could this below be a good way to model drug rehab completion?
 
-$$Y_i \sim Bernoulli(\mu_i)$$
+$$yh_i \sim Bernoulli(\mu_i)$$
 
 $$\mu_i = X_i \beta $$
 
@@ -75,7 +75,7 @@ Well there is a slight problem with this notation. We can see here that $$\mu_i$
 ## Link functions
 In order to make sure that the input to the Bernoulli distribution is between 0 and 1, let's add what's called a link function to transform the output from the covariates into something that our distribution can handle.
 
-$$Y_i \sim Bernoulli(\mu_i)$$
+$$y_i \sim Bernoulli(\mu_i)$$
 
 $$ln(\frac{\mu_i}{1- \mu_i}) = X_i \beta $$
 
@@ -85,7 +85,7 @@ In fact, you may have come across this model before, this is simply **logistic r
 
 In fact, every single GLM has a link function. Wait a second, didn't we say that linear regression is a GLM? Shouldn't it have a link function? Let's go back to the notation for linear regression.
 
-$$Y_i \sim N(\mu_i, \sigma^2)$$
+$$y_i \sim N(\mu_i, \sigma^2)$$
 
 $$\mu_i = X_i \beta $$
 
@@ -180,7 +180,7 @@ modeling whether a passenger survived or not based on the fare they paid and the
 
 I know I said we were done with the math, but let's recall our mathematical model for a logistic regression:
 
-$$Y_i \sim Bernoulli(\mu_i)$$
+$$y_i \sim Bernoulli(\mu_i)$$
 
 $$ln(\frac{\mu_i}{1- \mu_i}) = X_i \beta $$
 
@@ -249,7 +249,7 @@ It's important to remember that our interpretation relied on the logit link func
 
 For example, imagine we were doing Poisson regression with the following form:
 
-$$Y_i \sim Poisson(\lambda_i)$$
+$$y_i \sim Poisson(\lambda_i)$$
 
 $$ln(\lambda_i) = X_i \beta $$
 

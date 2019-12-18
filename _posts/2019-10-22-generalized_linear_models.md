@@ -66,7 +66,7 @@ The Bernoulli distribution has only 1 parameter which is the probability of bein
 
 Could this below be a good way to model drug rehab completion?
 
-$$yh_i \sim Bernoulli(\mu_i)$$
+$$y_i \sim Bernoulli(\mu_i)$$
 
 $$\mu_i = X_i \beta $$
 
